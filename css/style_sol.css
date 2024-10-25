@@ -1,0 +1,128 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-image: url('images/sol.jpg'); /* Replace with your own image */
+    background-size: cover; /* Ensures the background image covers the entire page */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    color: #ffffff;
+}
+
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+    color: #ffffff;
+}
+
+h1, h2 {
+    color: #ffffff;
+}
+
+/* Subject Link Styling */
+.subject {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.subject a {
+    text-decoration: none;
+    color: #e0dd00; /* Blue link color */
+    border: 2px solid #f5f100;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.subject a:hover {
+    background-color: #f5f100;
+    color: white;
+}
+
+/* PDF Preview Styling */
+.pdf-preview {
+    margin-top: 20px;
+}
+
+iframe {
+    width: 80%;
+    height: 500px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #ffffff;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+width: 150px;
+}
+.nav-links{
+flex: 1;
+text-align: right;
+}
+.nav-links ul li{
+list-style: none;
+display: inline-block;
+padding: 8px 12px;
+position: relative;
+}
+.nav-links ul li a{
+color: #ffffff;
+text-decoration: none;
+font-size: 20px;
+}
+.nav-links ul li::after{
+content: '';
+width: 0%;
+height: 2px;
+background: #f44336;
+display: block;
+margin: auto;
+transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+width:100%;
+}
+
+/* Specific styling for the lecture notes heading */
+.lecture-notes-title {
+    font-size:60px; /* Larger font size */
+    color: #ffffff;  /* Optional: Change color */
+    font-weight: bold;  /* Optional: Make it bold */
+    text-transform: uppercase;  /* Optional: Make it uppercase */
+    margin-bottom: 20px;  /* Optional: Adjust margin */
+}
+.lect-sem{
+    font-size: 30px;
+}
+
+/* Add space below the Semester 1 heading */
+h2 {
+    margin-bottom: 20px;  /* Adjust this value as needed */
+}
+
+/* Add space above the subject link */
+.subject {
+    margin-top: 80px;  /* Adjust this value as needed */
+}
+.info {
+    color:rgb(0, 255, 13)
+}

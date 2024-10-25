@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body {
+    background-color: #fdf9f1; /* Creamy white background */
+}
+
+.impact {
+    font-size: 24px ; /* Make the text larger */
+    font-weight: bold ; /* Bold text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6) ; /* Add a shadow for emphasis */
+    margin-top: 20px ;
+}
+.text-box {
+    padding: 20px; /* Adjusts spacing inside the container */
+  }
+
+  .text-box h1 {
+    margin-bottom: 20px; /* Adds space below the heading */
+  }
+
+  .text-box p {
+    margin-bottom: 15px; /* Adds space between paragraphs */
+    line-height: 1.6; /* Increases line spacing inside each paragraph */
+  }
+
+.text-box p:last-of-type {
+    font-weight: bold ;
+    font-size: 1.2em ;
+}
+
+
+
+.header img {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url('images/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width:100%;
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+}
+.text-box h1{
+    font-size: 70px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 25px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: ls;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 30px;
+    }  
+}
+
+
+ /*call to action*/
+ .cta{
+    margin: 30px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('images/banner2.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px 0;
+ }
+
+ .cta h1{
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 0;
+ }
+
+ @media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+ }
+ .footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+ }
+ .footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+ }
+ a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent elements */
+}
+
+
+
+/* CALL TO ACTION SECTION (CTA) */
+.cta {
+    margin: 30px auto; /* Reduced top and bottom margin */
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('images/banner2.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px 0; /* Reduced padding */
+}
+
+.cta h1 {
+    color: #fff;
+    margin-bottom: 20px; /* Reduced margin bottom */
+    padding: 0;
+}
+
+/* Footer remains unchanged */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+/* SERVICES SECTION CSS */
+}
+/* Underlining */
+  .services h1 {
+    background-color: transparent;
+    background-image: linear-gradient(to right, #5a4237 0%, #5a4237 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    border-bottom: 4px solid #5a4237; /* Decorative underline */
+    display: inline-block; /* Center the underline */
+  }
+/* ICON */
+.services h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #5a4237;
+    font-weight: bold;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    color: #5a4237;
+    margin: 0 10px;
+  }
+  
+
+
+.services h1 {
+    background-color: transparent;
+    background-image: linear-gradient(to right, #5a4237 0%, #5a4237 100%); /* Use the appropriate gradient from previous examples */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+    padding: 20px 0; /* Increases space inside the element (top and bottom) */
+    margin-top: 30px;
+    margin-bottom: 20px; /* Adds space below the heading for visual separation */
+    text-align: center; /* Centers the text */
+  }
+  
+  .services {
+    background-color: #fdf9f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .services h1 {
+    background-color: transparent;
+    background-image: linear-gradient(to right, #4b3621 0%, #4b3621 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+  }
+  
+
+.services__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services__card {
+    margin: 1rem;
+    height: 525px;
+    width: 400px;
+    border-radius: 4px;
+    background-image: linear-gradient(
+        to bottom, rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%
+        ),
+        url('/images/slide1.jpg');
+        background-size: cover;
+        position: relative;
+        color: #fff;       
+}
+.services__card:nth-child(2) {
+    background-image: linear-gradient(
+        to bottom, rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%
+        ),
+        url('/images/slide2.jpg'); 
+}
+.services__card:nth-child(3) {
+    background-image: linear-gradient(
+        to bottom, rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%
+        ),
+        url('/images/slide3.jpg'); 
+}
+.services h2{
+    position: absolute;
+    font-size: 25px;
+    top: 300px;
+    left: 30px;
+}
+.services__card p{
+    color: #fff;
+    font-size: 17px;
+    position: absolute;
+    top: 350px;
+    left: 30px;
+}
+.services__card button{
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #ff7062;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.services__card:hover {
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+@media screen and (max-width: 960px) {
+    .services {
+        height: 160px;
+    }
+    .services h1 {
+        font-size: 2rem;
+        margin-top: 12rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .services {
+        height: 1400px;
+    }
+    .services h1 {
+        font-size: 1.2rem;
+    }
+    .services__card {
+        width: 300px;
+    }
+} 
+
+/* SERVICES SECTION */
+.services {
+    background-color: #fdf9f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0; /* Reduced padding */
+    margin-bottom: 10px; /* Reduced margin bottom */
+}
+
+.services h1 {
+    background-color: transparent;
+    background-image: linear-gradient(to right, #4b3621 0%, #4b3621 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+    margin-top: 100px; /* Adjusted top margin */
+    margin-bottom: 20px; /* Reduced bottom margin */
+    text-align: center;
+}
