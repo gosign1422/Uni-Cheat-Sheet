@@ -1,40 +1,43 @@
-
-
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-    background-image: url('images/pyq.jpg'); /* Replace with your own image */
-    background-size: cover; /* Ensures the background image covers the entire page */
-    background-position: center; /* Centers the background image */
-    background-attachment: fixed; /* Keeps the background fixed when scrolling */
-    color: #ffffff;
-}
-
-
 /* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
-    background-color: #f8f9fa; /* Light background color */
+    background-image: url('images/pyq.jpg'); /* Replace with your own image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f8f9fa;
     color: #ffffff;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding is included in the width and height */
 }
 
+/* Reset box-sizing for all elements */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Heading Styling */
 h1, h2 {
     color: #fff;
+    font-size: 2.5rem; /* Scalable font size */
+}
+
+h2 {
+    margin-bottom: 20px;  /* Space below heading */
 }
 
 /* Subject Link Styling */
 .subject {
     margin: 20px 0;
-    font-size: 24px;
+    font-size: 1.5rem; /* Scalable font size */
     font-weight: bold;
 }
 
 .subject a {
     text-decoration: none;
-    color: #ff0745; /* Blue link color */
+    color: #ff0745; /* Link color */
     border: 2px solid #ff0745;
     padding: 10px 20px;
     border-radius: 5px;
@@ -52,7 +55,7 @@ h1, h2 {
 }
 
 iframe {
-    width: 80%;
+    width: 100%;  /* Full width for responsiveness */
     height: 500px;
     margin: 20px 0;
     border: 1px solid #ccc;
@@ -62,67 +65,277 @@ iframe {
 /* Footer */
 footer {
     margin-top: 40px;
-    font-size: 14px;
+    font-size: 1rem;  /* Scalable font size */
     color: #ffffff;
 }
-nav{
+
+/* Navigation Bar */
+nav {
     display: flex;
+    flex-wrap: wrap;
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
 }
-nav img{
-width: 150px;
-}
-.nav-links{
-flex: 1;
-text-align: right;
-}
-.nav-links ul li{
-list-style: none;
-display: inline-block;
-padding: 8px 12px;
-position: relative;
-}
-.nav-links ul li a{
-color: #ffffff;
-text-decoration: none;
-font-size: 20px;
-}
-.nav-links ul li::after{
-content: '';
-width: 0%;
-height: 2px;
-background: #f44336;
-display: block;
-margin: auto;
-transition: 0.5s;
-}
-.nav-links ul li:hover::after{
-width:100%;
+
+nav img {
+    width: 150px;
+    height: auto; /* Ensures image scales properly */
 }
 
-/* Specific styling for the lecture notes heading */
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+/* Lecture Notes Title */
 .lecture-notes-title {
-    font-size:60px; /* Larger font size */
-    color: #ffffff;  /* Optional: Change color */
-    font-weight: bold;  /* Optional: Make it bold */
-    text-transform: uppercase;  /* Optional: Make it uppercase */
-    margin-bottom: 20px;  /* Optional: Adjust margin */
-}
-.lect-sem{
-    font-size: 30px;
+    font-size: 3rem;  /* Responsive font size */
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-/* Add space below the Semester 1 heading */
-h2 {
-    margin-bottom: 20px;  /* Adjust this value as needed */
+/* Semester Text */
+.lect-sem {
+    font-size: 1.75rem;  /* Responsive font size */
 }
 
 /* Add space above the subject link */
 .subject {
-    margin-top: 80px;  /* Adjust this value as needed */
+    margin-top: 80px;  /* Adjusted for spacing */
 }
+
+/* Info Text */
 .info {
-    color:rgb(238, 255, 0)
+    color: rgb(0, 195, 255); /* Adjusted for visibility */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .lecture-notes-title {
+        font-size: 2.5rem;
+    }
+
+    .lect-sem {
+        font-size: 1.5rem;
+    }
+
+    .subject a {
+        padding: 8px 16px;
+        font-size: 1.25rem;
+    }
+
+    nav img {
+        width: 130px;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav img {
+        width: 120px;
+    }
+
+    .lecture-notes-title {
+        font-size: 2rem;
+    }
+
+    .lect-sem {
+        font-size: 1.25rem;
+    }
+
+    .subject a {
+        padding: 6px 12px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .lecture-notes-title {
+        font-size: 1.75rem;
+    }
+
+    .lect-sem {
+        font-size: 1rem;
+    }
+
+    .subject a {
+        padding: 4px 10px;
+        font-size: 1rem;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Header & Navigation */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url('images/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  nav {
+    display: flex;
+    padding: clamp(1rem, 2vw, 2rem) clamp(1.5rem, 6vw, 6rem);
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav img {
+    width: clamp(100px, 15vw, 150px);
+  }
+  
+  .nav-links {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: clamp(4px, 1vw, 8px) clamp(6px, 1.5vw, 12px);
+    position: relative;
+  }
+  
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 20px);
+  }
+  
+  .nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: width 0.5s;
+  }
+  
+  .nav-links ul li:hover::after {
+    width: 100%;
+  }
+  
+  /* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* High Contrast */
+  @media (prefers-contrast: high) {
+    .hero-btn,
+    .services__card button {
+      border: 2px solid currentColor;
+    }
+    
+    .text-box,
+    .services__card {
+      text-shadow: none;
+    }
+  }
+
+     /* Device Compatibility */
+@media (max-width: 768px) {
+    .nav-links ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .hero-btn,
+    .nav-links,
+    .services__card button {
+      display: none;
+    }
+    
+    body {
+      background: white;
+      color: black;
+    }
+    
+    .text-box,
+    .services__card {
+      color: black;
+    }
+  }
+  .lecture-notes-title {
+    font-size: 3rem;  /* Responsive font size */
+    color: #FFFFFF;  /* Bright white for better contrast */
+    font-weight: bold;  /* Bold font for emphasis */
+    text-transform: uppercase;  /* Uppercase to make the text stand out */
+    margin-bottom: 20px;  /* Add spacing below the title */
+    text-align: center;  /* Center the title */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);  /* Darker shadow for clarity */
+    background-color: rgba(0, 0, 0, 0.4);  /* Semi-transparent black background to improve readability */
+    padding: 15px;  /* Add padding around the text */
+    border-radius: 10px;  /* Rounded corners for aesthetics */
+    border: 2px solid rgba(255, 255, 255, 0.5);  /* Soft white border */
 }
