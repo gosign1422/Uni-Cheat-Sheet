@@ -714,6 +714,7 @@ nav img {
 }
 
 /* Hover Text Overlay */
+/* Hover Text Overlay - Always Visible */
 .hover-text {
     position: absolute;
     bottom: 0;
@@ -724,10 +725,10 @@ nav img {
     font-size: 1.2rem;
     text-align: center;
     padding: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    transform: translateY(100%);
+    opacity: 1;  /* Set opacity to 1 to make it always visible */
+    transform: translateY(0);  /* Ensure it's always in view */
 }
+
 
 .slide:hover .hover-text {
     opacity: 1;
@@ -777,6 +778,22 @@ nav img {
         max-width: 240px; /* Set a maximum width for mobile */
     }
 }
+@media (max-width: 768px) {
+    .slider-btn {
+        width: 40px; /* Smaller size for mobile */
+        height: 40px;
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .slider-btn.left {
+        left: 5px; /* Adjust left position */
+    }
+
+    .slider-btn.right {
+        right: 5px; /* Adjust right position */
+    }
+}
+
 
 @media (max-width: 480px) {
     .slide {
@@ -785,3 +802,59 @@ nav img {
     }
 }
 
+/* Slider - Ensure Scrollbars Are Always Visible */
+.slider {
+    display: flex;
+    gap: 20px; /* Gap between items */
+    overflow-x: auto; /* Enable horizontal scrolling with visible scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    transition: transform 0.5s ease-in-out;
+    padding: 10px;
+    scrollbar-width: thin; /* Firefox - Make the scrollbar always visible and thinner */
+    scrollbar-color: #888 #f1f1f1; /* Firefox - Color of scrollbar and track */
+}
+
+.slider::-webkit-scrollbar {
+    height: 12px;  /* Set a visible height for the scrollbar */
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: #888;  /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded edges for the scrollbar thumb */
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+    background: #555;  /* Darker color when hovered */
+}
+
+.slider::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Background color of the scrollbar track */
+}
+
+/* Adjust for Mobile Devices */
+@media (max-width: 768px) {
+    .slider {
+        overflow-x: scroll; /* Make sure it scrolls on mobile */
+        -webkit-overflow-scrolling: touch; /* Ensure smooth scrolling on iOS devices */
+    }
+}
+.slider-container {
+    pointer-events: auto; /* Ensure clicks pass through */
+}
+.slider {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+.slider-btn {
+    width: 50px; /* Increase size for better tap area */
+    height: 50px;
+    font-size: 2rem;
+    padding: 10px;
+}
+.slider {
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    -webkit-overflow-scrolling: touch; /* Enable touch-based scrolling for mobile */
+}
