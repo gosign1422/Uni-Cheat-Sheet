@@ -337,3 +337,456 @@ nav img {
     border-radius: 10px;  /* Rounded corners for aesthetics */
     border: 2px solid rgba(255, 255, 255, 0.5);  /* Soft white border */
 }
+
+/* netflix */
+/* General Slider Styles */
+.content-slider {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content-slider h2 {
+    color: #fff;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    transition: transform 0.5s ease-in-out;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+/* Slide */
+.slide {
+    flex: 0 0 25%; /* Adjust this to control how many slides are visible */
+    max-width: 25%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.slide:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Hover Text Overlay */
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
+.slide:hover .hover-text {
+    opacity: 1;
+    transform: translateY(0); /* Slide-up effect */
+}
+
+/* Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.slider-btn:hover {
+    opacity: 1;
+}
+
+.slider-btn.left {
+    left: 10px;
+}
+
+.slider-btn.right {
+    right: 10px;
+}
+/* General Slider Styles */
+.content-slider {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content-slider h2 {
+    color: #fff;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+    display: flex;
+    align-items: center;
+    padding: 10px 0; /* Add vertical padding to separate sections */
+    width: 100%;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    gap: 20px; /* Increase gap to make the items appear separate and neat */
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    transition: transform 0.5s ease-in-out;
+    padding: 10px; /* Add some internal padding to prevent images touching edges */
+}
+
+/* Slide */
+.slide {
+    flex: 0 0 20%; /* Adjusted to make sure five slides are visible at a time */
+    max-width: 20%; /* Ensure uniform width for each slide */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 200px; /* Fixed height for all images to ensure uniformity */
+    object-fit: cover; /* Ensure images are scaled properly without distortion */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.slide:hover img {
+    transform: scale(1.05); /* Slight zoom effect to indicate interactivity */
+}
+
+/* Hover Text Overlay */
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
+.slide:hover .hover-text {
+    opacity: 1;
+    transform: translateY(0); /* Slide-up effect */
+}
+
+/* Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* More opacity for better contrast */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.slider-btn:hover {
+    opacity: 1;
+}
+
+.slider-btn.left {
+    left: 10px;
+}
+
+.slider-btn.right {
+    right: 10px;
+}
+
+/* Single Slide Container (for non-slider content) */
+.single-slide-container {
+    display: flex;
+    align-items: center;     /* Center the content vertically if needed */
+    padding: 20px 0;
+    width: 100%;
+    gap: 20px;
+}
+
+.single-slide-container .slide {
+    flex: 0 0 23vw; /* Consistent width for both slider and non-slider sections */
+    max-width: 330px; /* Set a maximum width for consistency */
+    min-width: 170px; /* Minimum width to avoid shrinking too much */
+    aspect-ratio: 1 / 1; /* Ensures a square shape */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.single-slide-container .slide img {
+    width: 100%;
+    height: 100%; /* Match height to ensure consistency with slider */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.single-slide-container .slide:hover img {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Media Queries for Responsive Design (Consistent for Both Slider and Non-Slider Sections) */
+@media (max-width: 1024px) {
+    .single-slide-container .slide {
+        flex: 0 0 40vw; /* Increase the width to take up more space on smaller screens */
+        max-width: 280px; /* Adjust maximum width */
+    }
+}
+
+@media (max-width: 768px) {
+    .single-slide-container .slide {
+        flex: 0 0 55vw; /* Show larger items on smaller screens */
+        max-width: 240px; /* Set a maximum width for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .single-slide-container .slide {
+        flex: 0 0 65vw; /* One item visible, larger size */
+        max-width: 200px; /* Reduce max-width for very small screens */
+    }
+}
+
+
+/* square boxes */
+/* Slide */
+.slide {
+    flex: 0 0 auto;
+    aspect-ratio: 1 / 1; /* Ensures the slide is always a square */
+    width: 18%; /* Width set in percentage to make sure it adjusts with the screen */
+    max-width: 200px; /* Optional: Control the maximum size */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain the image's aspect ratio within the square */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.slide:hover img {
+    transform: scale(1.05);
+}
+
+/* All Resolutions */
+/* General Slider Styles */
+.content-slider {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content-slider h2 {
+    color: #fff;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px 0; /* Add vertical padding to separate sections */
+    width: 100%;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    gap: 30px; /* Increase gap to make the items appear separate and neat */
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    transition: transform 0.5s ease-in-out;
+    padding: 20px; /* Add some internal padding to prevent images touching edges */
+}
+
+/* Slide */
+.slide {
+    flex: 0 0 23vw; /* 30% of the viewport width */
+    max-width: 330px; /* Set a maximum width */
+    min-width: 170px; /* Minimum width to avoid too much shrinking */
+    aspect-ratio: 1 / 1; /* Keeps the slide always a square */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fits without distorting */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.slide:hover img {
+    transform: scale(1.05); /* Slight zoom effect to indicate interactivity */
+}
+
+/* Hover Text Overlay */
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
+.slide:hover .hover-text {
+    opacity: 1;
+    transform: translateY(0); /* Slide-up effect */
+}
+
+/* Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* More opacity for better contrast */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.slider-btn:hover {
+    opacity: 1;
+}
+
+.slider-btn.left {
+    left: 10px;
+}
+
+.slider-btn.right {
+    right: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .slide {
+        flex: 0 0 40vw; /* Increase the width to take up more space on smaller screens */
+        max-width: 280px; /* Adjust maximum width */
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 55vw; /* Show only 1 or 2 items with larger size */
+        max-width: 240px; /* Set a maximum width for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        flex: 0 0 65vw; /* One item visible, larger size */
+        max-width: 200px; /* Reduce max-width for very small screens */
+    }
+}
