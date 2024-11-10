@@ -875,3 +875,18 @@ nav img {
     scroll-behavior: smooth; /* Enable smooth scrolling */
     -webkit-overflow-scrolling: touch; /* Enable touch-based scrolling for mobile */
 }
+/* Hover Text Overlay */
+/* Hover Text Overlay - Always Visible */
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    opacity: 1;  /* Set opacity to 1 to make it always visible */
+    transform: translateY(0);  /* Ensure it's always in view */
+}
