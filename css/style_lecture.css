@@ -254,7 +254,7 @@ nav img {
   }
   
   .nav-links ul li a {
-    color: #fff;
+    color: #f51414;
     text-decoration: none;
     font-size: clamp(16px, 2vw, 20px);
   }
@@ -263,7 +263,7 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #fbff0b;
     display: block;
     margin: auto;
     transition: width 0.5s;
@@ -330,7 +330,7 @@ nav img {
   }
   /* Info Text */
 .info {
-    color: #f5f410; /* Adjusted for visibility */
+    color: #f51414; /* Adjusted for visibility */
 }
 /* netflix */
 /* General Slider Styles */
