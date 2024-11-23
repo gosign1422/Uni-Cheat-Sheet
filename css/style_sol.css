@@ -1,6 +1,7 @@
 /* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
     text-align: center;
     padding: 20px;
     background-image: url('images/sol.jpg'); /* Replace with your own image */
@@ -253,7 +254,7 @@ nav img {
   }
   
   .nav-links ul li a {
-    color: #00ff0d;
+    color: #fff;
     text-decoration: none;
     font-size: clamp(16px, 2vw, 20px);
   }
@@ -262,7 +263,7 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #00ff0d;
     display: block;
     margin: auto;
     transition: width 0.5s;
@@ -878,4 +879,3 @@ nav img {
     opacity: 1;  /* Set opacity to 1 to make it always visible */
     transform: translateY(0);  /* Ensure it's always in view */
 }
-

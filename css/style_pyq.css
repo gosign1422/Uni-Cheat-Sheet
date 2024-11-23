@@ -1,6 +1,7 @@
 /* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
     text-align: center;
     padding: 20px;
     background-image: url('images/pyq.jpg'); /* Replace with your own image */
@@ -63,10 +64,10 @@ iframe {
 }
 
 /* Footer */
-footer {
+.footer {
     margin-top: 40px;
     font-size: 1rem;  /* Scalable font size */
-    color: #ffffff;
+    color: #000000;
 }
 
 /* Navigation Bar */
@@ -254,7 +255,7 @@ nav img {
   }
   
   .nav-links ul li a {
-    color: #0008ff;
+    color: #fff;
     text-decoration: none;
     font-size: clamp(16px, 2vw, 20px);
   }
@@ -263,7 +264,7 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #0008ff;
     display: block;
     margin: auto;
     transition: width 0.5s;
@@ -666,7 +667,7 @@ nav img {
 }
 
 .content-slider h2 {
-    color: #ff3030;
+    color: #fff;
     text-align: left;
     margin-bottom: 20px;
     font-size: 1.8rem;
