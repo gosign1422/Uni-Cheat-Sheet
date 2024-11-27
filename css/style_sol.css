@@ -142,7 +142,11 @@ nav img {
 
 /* Info Text */
 .info {
-    color: #00ff0d; /* Adjusted for visibility */
+    color: #28A745; /* Adjusted for visibility */
+}
+.warning {
+    color: #888;
+    font-size: 0.8rem;
 }
 
 /* Media Queries for Responsiveness */
