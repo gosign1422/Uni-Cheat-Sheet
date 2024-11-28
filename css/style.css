@@ -25,7 +25,7 @@ body {
 .header {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url('images/banner.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(36, 36, 36, 0.6)), url('images/banner.jpg');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -39,7 +39,7 @@ nav {
 }
 
 nav img {
-  width: clamp(100px, 15vw, 150px);
+  width: 80px;
 }
 
 .nav-links {
@@ -57,7 +57,8 @@ nav img {
 .nav-links ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .nav-links ul li::after {
@@ -81,31 +82,39 @@ nav img {
   position: absolute;
   top: 50%;
   left: 70%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
   padding: clamp(1rem, 2vw, 2rem);
 }
 
 .text-box h1 {
-  font-size: clamp(2rem, 5vw, 4.375rem);
+  font-size: 50px;
   margin-bottom: clamp(1rem, 2vw, 1.25rem);
 }
 
 .text-box p {
-  font-size: clamp(1rem, 2vw, 1.563rem);
+  font-size: 20px;
   margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 400;
+}
+
+.impact{
+  font-weight: 600 !important;
 }
 
 /* Buttons */
 .hero-btn {
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: black;
   border: 1px solid #fff;
   padding: clamp(8px, 1.5vw, 12px) clamp(20px, 3vw, 34px);
   font-size: clamp(0.8rem, 1.2vw, 1rem);
   background: transparent;
   position: relative;
   transition: all 0.3s ease;
+  background-color: white;
+  font-weight: 600;
+  border-radius: 8px;
 }
 
 .hero-btn:hover {

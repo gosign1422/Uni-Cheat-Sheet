@@ -49,27 +49,16 @@ h2 {
     background-color: #ff0745;
     color: white;
 }
-
-/* PDF Preview Styling */
-.pdf-preview {
-    margin-top: 20px;
-}
-
-iframe {
-    width: 100%;  /* Full width for responsiveness */
-    height: 500px;
-    margin: 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
 /* Footer */
 .footer {
     margin-top: 40px;
     font-size: 1rem;  /* Scalable font size */
     color: #000000;
 }
-
+.warning {
+    color: #e6e6e6;
+    font-size: 1rem;
+}
 /* Navigation Bar */
 nav {
     display: flex;
@@ -80,8 +69,8 @@ nav {
 }
 
 nav img {
-    width: 150px;
-    height: auto; /* Ensures image scales properly */
+    width: 100px; /* Adjusted to reduce the size */
+    height: auto; /* Ensures image scales proportionally */
 }
 
 .nav-links {
@@ -111,7 +100,7 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #0008ff;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -120,7 +109,6 @@ nav img {
 .nav-links ul li:hover::after {
     width: 100%;
 }
-
 /* Lecture Notes Title */
 .lecture-notes-title {
     font-size: 3rem;  /* Responsive font size */
@@ -161,7 +149,7 @@ nav img {
     }
 
     nav img {
-        width: 130px;
+        width: 100px;
     }
 
     h1, h2 {
@@ -181,7 +169,7 @@ nav img {
     }
 
     nav img {
-        width: 120px;
+        width: 80px;
     }
 
     .lecture-notes-title {
@@ -220,7 +208,6 @@ nav img {
         font-size: 1.5rem;
     }
 }
-
 /* Header & Navigation */
 .header {
     min-height: 100vh;
@@ -239,8 +226,9 @@ nav img {
   }
   
   nav img {
-    width: clamp(100px, 15vw, 150px);
-  }
+    width: 100px; /* Adjusted to reduce the size */
+    height: auto; /* Ensures image scales proportionally */
+}
   
   .nav-links {
     flex: 1;
@@ -255,11 +243,12 @@ nav img {
   }
   
   .nav-links ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: 20px;
+    font-weight: 501;
+    
   }
-  
   .nav-links ul li::after {
     content: '';
     width: 0%;
@@ -273,7 +262,7 @@ nav img {
   .nav-links ul li:hover::after {
     width: 100%;
   }
-  
+
   /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -298,7 +287,6 @@ nav img {
       text-shadow: none;
     }
   }
-
      /* Device Compatibility */
 @media (max-width: 768px) {
     .nav-links ul {

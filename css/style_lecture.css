@@ -4,14 +4,14 @@ body {
     line-height: 1.6;
     text-align: center;
     padding: 20px;
-    background-color: #f8f9fa; /* Light background color */
-    color: #fff;
-    margin: 0;  /* Removes default body margin */
     background-image: url('images/lecture-image.jpg'); /* Replace with your own image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    box-sizing: border-box; /* Ensures padding is included in element's width and height */
+    background-color: #f8f9fa;
+    color: #ffffff;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding is included in width and height */
 }
 
 /* Reset box-sizing for all elements */
@@ -19,10 +19,10 @@ body {
     box-sizing: inherit;
 }
 
-/* Make text scalable based on the screen size */
+/* Heading Styling */
 h1, h2 {
     color: #ffffff;
-    font-size: 2.5rem; /* Scalable font size */
+    font-size: 2.5rem; /* Responsive and scalable font size */
 }
 
 h2 {
@@ -49,27 +49,16 @@ h2 {
     background-color: #09ff00;
     color: white;
 }
-
-/* PDF Preview Styling */
-.pdf-preview {
-    margin-top: 20px;
-}
-
-iframe {
-    width: 100%;  /* Full width for responsiveness */
-    height: 500px;
-    margin: 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
 /* Footer */
 footer {
     margin-top: 40px;
     font-size: 1rem;
     color: #666;
 }
-
+.warning {
+    color: #e6e6e6;
+    font-size: 1rem;
+}
 /* Navigation Bar */
 nav {
     display: flex;
@@ -80,9 +69,10 @@ nav {
 }
 
 nav img {
-    width: 150px;
-    height: auto; /* Ensure image scales properly */
+    width: 100px; /* Adjusted to reduce the size */
+    height: auto; /* Ensures image scales proportionally */
 }
+
 
 .nav-links {
     flex: 1;
@@ -102,7 +92,7 @@ nav img {
 }
 
 .nav-links ul li a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.25rem;
 }
@@ -111,7 +101,7 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #fff;
+    background: #f44336;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -124,25 +114,25 @@ nav img {
 /* Lecture Notes Title */
 .lecture-notes-title {
     font-size: 3rem;  /* Responsive font size */
-    color: #FFFFFF;  /* Bright white for better contrast */
-    font-weight: bold;  /* Bold font for emphasis */
-    text-transform: uppercase;  /* Uppercase to make the text stand out */
-    margin-bottom: 20px;  /* Add spacing below the title */
-    text-align: center;  /* Center the title */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);  /* Darker shadow for clarity */
-    background-color: rgba(0, 0, 0, 0.4);  /* Semi-transparent black background to improve readability */
-    padding: 15px;  /* Add padding around the text */
-    border-radius: 10px;  /* Rounded corners for aesthetics */
-    border: 2px solid rgba(255, 255, 255, 0.5);  /* Soft white border */
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
+
 /* Semester Text */
 .lect-sem {
-    font-size: 1.75rem;
+    font-size: 1.75rem;  /* Responsive font size */
 }
 
 /* Add space above the subject link */
 .subject {
-    margin-top: 80px;  /* Space above subjects */
+    margin-top: 80px;  /* Adjusted for spacing */
+}
+
+/* Info Text */
+.info {
+    color: #28A745; /* Adjusted for visibility */
 }
 
 /* Media Queries for Responsiveness */
@@ -161,7 +151,7 @@ nav img {
     }
 
     nav img {
-        width: 130px;
+        width: 100px;
     }
 
     h1, h2 {
@@ -181,7 +171,7 @@ nav img {
     }
 
     nav img {
-        width: 120px;
+        width: 80px;
     }
 
     .lecture-notes-title {
@@ -220,7 +210,6 @@ nav img {
         font-size: 1.5rem;
     }
 }
-
 /* Header & Navigation */
 .header {
     min-height: 100vh;
@@ -239,8 +228,9 @@ nav img {
   }
   
   nav img {
-    width: clamp(100px, 15vw, 150px);
-  }
+    width: 100px; /* Adjusted to reduce the size */
+    height: auto; /* Ensures image scales proportionally */
+}
   
   .nav-links {
     flex: 1;
@@ -255,11 +245,12 @@ nav img {
   }
   
   .nav-links ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: 20px;
+    font-weight: 501;
+    
   }
-  
   .nav-links ul li::after {
     content: '';
     width: 0%;
@@ -298,9 +289,6 @@ nav img {
       text-shadow: none;
     }
   }
-
-  /* 
-   */
    /* Device Compatibility */
 @media (max-width: 768px) {
     .nav-links ul {
@@ -329,9 +317,18 @@ nav img {
       color: black;
     }
   }
-  /* Info Text */
-.info {
-    color: #f51414; /* Adjusted for visibility */
+  .lecture-notes-title {
+    font-size: 3rem;  /* Responsive font size */
+    color: #FFFFFF;  /* Bright white for better contrast */
+    font-weight: bold;  /* Bold font for emphasis */
+    text-transform: uppercase;  /* Uppercase to make the text stand out */
+    margin-bottom: 20px;  /* Add spacing below the title */
+    text-align: center;  /* Center the title */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);  /* Darker shadow for clarity */
+    background-color: rgba(0, 0, 0, 0.4);  /* Semi-transparent black background to improve readability */
+    padding: 15px;  /* Add padding around the text */
+    border-radius: 10px;  /* Rounded corners for aesthetics */
+    border: 2px solid rgba(255, 255, 255, 0.5);  /* Soft white border */
 }
 /* netflix */
 /* General Slider Styles */
@@ -858,4 +855,19 @@ nav img {
     overflow-x: auto;
     scroll-behavior: smooth; /* Enable smooth scrolling */
     -webkit-overflow-scrolling: touch; /* Enable touch-based scrolling for mobile */
+}
+/* Hover Text Overlay */
+/* Hover Text Overlay - Always Visible */
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    opacity: 1;  /* Set opacity to 1 to make it always visible */
+    transform: translateY(0);  /* Ensure it's always in view */
 }
