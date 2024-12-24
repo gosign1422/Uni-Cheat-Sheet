@@ -1,0 +1,481 @@
+/* Base styles and typography */
+:root {
+    --header-height: 70px;
+  }
+  
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('../images/sol.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: "GT America Standard", Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 70px;
+  }
+  
+  /* Header section styling */
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    width: 100%;
+  }
+  
+  .lecture-notes-title {
+    font-size: 4rem !important;
+    padding: 20px;
+    font-family: "Times New Roman", Times, serif;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+                 -2px -2px 4px rgba(0, 0, 0, 0.7),
+                 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1.75s ease-out;
+    margin-bottom: 20px;
+  }
+  
+  .lect-sem {
+    font-size: 2.8rem;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+                 -2px -2px 4px rgba(0, 0, 0, 0.7),
+                 0 0 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2.25s ease-out;
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .lect-sem::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background-color: #ffffff;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  /* Logo styling */
+  
+  
+  /* Animation keyframes */
+  @keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  /* Subject sections */
+  .content-slider {
+    margin: 60px auto;
+    width: 92%;
+    max-width: 1400px;
+  }
+  
+  .content-slider h2 {
+    font-size: 2.2rem;
+    font-family: "Times New Roman", Times, serif;
+    color: #ffffff;
+    margin: 80px 0 30px 0;
+    padding-left: 20px;
+    border-left: 4px solid #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  /* Add a line between sections */
+  .content-slider h2:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+    );
+  }
+  
+  
+  
+  /* Slider container */
+  .slider-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
+  }
+  
+  .slider {
+    display: flex;
+    gap: 25px;
+    padding: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Slide styling */
+  .slide {
+    flex: 0 0 275px;
+    height: 275px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 1;
+  }
+  
+  .hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: #ffffff;
+  }
+  
+  /* Navigation buttons */
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    z-index: 10;
+  }
+  
+  .slider-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .slider-btn.left {
+    left: 10px;
+  }
+  
+  .slider-btn.right {
+    right: 10px;
+  }
+  
+  /* Warning text styling */
+  .warning {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 25px 40px;
+    margin: 60px auto;
+    max-width: 900px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  .warning span {
+    color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-weight: 500;
+    display: block;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Footer styling */
+  .footer {
+    padding: 20px 20px;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .footer h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+  }
+  
+  .footer p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin-top: 10px;
+    font-family: "GT America Standard", Arial, sans-serif;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .lecture-notes-title {
+        font-size: 4rem;
+    }
+    .lect-sem {
+        font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .lecture-notes-title {
+        font-size: 3.5rem;
+        letter-spacing: 3px;
+    }
+    .lect-sem {
+        font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .lecture-notes-title {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+    .lect-sem {
+        font-size: 1.8rem;
+    }
+    .lect-sem::after {
+        width: 100px;
+    }
+  }
+  
+  @media (max-height: 600px) {
+    .header-wrapper {
+        min-height: 400px;
+    }
+  }
+  
+  /* Remove underline from links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Optional: Add hover effect without underline */
+  a:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Create a fixed header container */
+  .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1001;
+  }
+  
+  /* Menu bar styling */
+  .menu {
+    background-color: rgba(0, 0, 0, 0.9); /* Add solid background */
+    z-index: 1001; /* Higher than the logo's z-index of 1000 */
+    position: fixed; /* Ensure it stays on top */
+    width: 100%;
+    top: 0;
+  }
+  
+  /* Responsive container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Logo responsive sizing */
+  .logo {
+    height: 0;
+  }
+  
+  /* Responsive typography */
+  h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  
+  /* Slider responsive styling */
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .slider-item {
+    flex: 0 0 auto;
+    width: calc(100% - 40px);
+    scroll-snap-align: start;
+  }
+  
+  /* Media Queries */
+  @media screen and (min-width: 768px) {
+    .slider-item {
+        width: calc(50% - 40px);
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .slider-item {
+        width: calc(33.333% - 40px);
+    }
+  }
+  
+  /* Mobile menu adjustments */
+  @media screen and (max-width: 768px) {
+    .menu {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+  
+    .menu.active {
+        transform: translateX(0);
+    }
+  
+    .nav-items {
+        flex-direction: column;
+        gap: 15px;
+    }
+  }
+  
+  /* General responsive spacing */
+  @media screen and (max-width: 480px) {
+    :root {
+        --header-height: 60px;
+    }
+  
+    .container {
+        padding: 0 15px;
+    }
+  
+    .logo {
+        height: 30px;
+    }
+  }
+  
+  /* Ensure images are responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Touch-friendly buttons and interactions */
+  .slider-btn {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Improve touch targets */
+  a, button {
+    min-height: 44px;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 540px) {
+    .content-slider h2 {
+        font-size: 1.7rem !important;
+  
+        margin: 40px 0 30px 0;
+     } 
+     .lecture-notes-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        padding: 20px;
+    }
+    }
+
+    

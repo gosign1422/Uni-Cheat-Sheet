@@ -1,0 +1,458 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+p, span, a, button, li {
+  font-family: "GT America Standard", Arial, sans-serif;
+}
+.nav-text{
+  font-family: "Times New Roman", Times, serif;
+}
+/* Import GT America Standard font if you have it */
+@font-face {
+  font-family: "GT America Standard";
+  src: url("path-to-your-font/GTAmericaStandard-Regular.woff2") format("woff2"),
+       url("path-to-your-font/GTAmericaStandard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html, body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%; /* Prevent text scaling in iOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+#navbar {
+  position: fixed;
+  top: -150%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.95);
+  width: 100%;
+  height: 100vh;
+  text-align: left;
+  transition: 0.4s ease;
+  margin: 0;
+  z-index: 999;
+  padding: 80px 40px;
+}
+
+#navbar.active {
+  top: 0;
+}
+
+/* Navbar Header */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.navbar-logo {
+  display: block;
+}
+
+.navbar-logo img {
+  height: 40px; /* Adjust based on your logo size */
+  width: auto;
+}
+
+.close-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 8px;
+}
+
+.close-btn i {
+  font-size: 24px;
+}
+
+/* Navbar Content */
+.navbar-content {
+  padding: 40px 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 12px 0;
+  margin-left: 40px;
+  position: relative;
+}
+/* Hide main logo when navbar is active */
+#navbar.active ~ #header .logo {
+  opacity: 0;
+}
+
+/* Show navbar logo only when navbar is active */
+.navbar-logo {
+  opacity: 0;
+}
+
+#navbar.active .navbar-logo {
+  opacity: 1;
+}
+
+/* Main nav items */
+.nav-link {
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+  font-size: clamp(42px, 5vw, 52px);
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Text wrapper for underline effect */
+.nav-text {
+  position: relative;
+}
+
+.nav-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover .nav-text::after {
+  width: 100%;
+}
+
+/* Expand icon */
+.expand-icon {
+  font-size: 0.6em;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+/* Update Hamburger Menu */
+.hamburger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: clamp(15px, 2vw, 20px);
+  position: fixed;
+  right: clamp(10px, 2vw, 20px);
+  top: clamp(10px, 2vh, 20px);
+  z-index: 1000;
+  touch-action: manipulation;
+  color: #fff;
+  gap: 10px;
+}
+
+/* Close button styling */
+.hamburger.active {
+  right: 20px; /* Consistent positioning */
+  top: 20px;
+}
+
+.hamburger.active .menu-text {
+  display: none; /* Hide "Menu" text when active */
+}
+
+/* Remove the underline effect */
+#navbar li::after {
+  display: none;
+}
+
+/* Hover effect */
+#navbar li a:hover {
+  opacity: 0.7;
+}
+/* Header and Hamburger Menu */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.menu-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Hide hamburger when navbar is active */
+.hamburger.hide {
+  display: none;
+}
+
+/* Close Button Styling */
+.close-btn {
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.hamburger i {
+  font-size: 20px;
+}
+
+/* Close Button */
+.close-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  z-index: 1001;
+}
+
+.close-btn i {
+  font-size: 20px;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}
+
+/* Hamburger icon transition */
+.hamburger .bar {
+  transition: all 0.6s ease;
+}
+
+/* Submenu styling */
+.submenu {
+  display: none;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.submenu li {
+  margin-left: 0;
+  padding: 8px 0;
+}
+
+.submenu li a {
+  color: #fff !important;
+  font-size: clamp(28px, 3vw, 34px);
+  opacity: 0.8;
+  white-space: nowrap;
+  display: block;
+  text-decoration: none !important; /* Force no underline */
+}
+
+.submenu li a .nav-text::after {
+  display: none !important; /* Force no underline effect */
+}
+
+/* Keep hover opacity effect */
+.submenu li a:hover {
+  opacity: 1;
+}
+
+/* Keep main nav item underlines */
+.nav-item > .nav-link .nav-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+/* Show submenu when parent is active */
+.nav-item.active .submenu {
+  display: block;
+}
+
+/* Add arrow indicator for items with submenus */
+.nav-link.has-submenu::after {
+  content: '+';
+  margin-left: 15px;
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.nav-item.active .nav-link.has-submenu::after {
+  content: '−';
+}
+
+/* When any item is active, dim all nav items */
+.nav-items.has-active .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.3); /* Grey color for inactive items */
+}
+
+/* Keep active item white */
+.nav-items.has-active .nav-item.active .nav-link {
+  color: #fff; /* White color for active item */
+}
+
+/* Keep submenu items white */
+.nav-items.has-active .submenu a {
+  color: #fff;
+}
+
+/* Menu button container */
+.header-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Menu box */
+.hamburger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* Menu text */
+.menu-text {
+  color: #fff;
+  font-size: 24px;
+  font-family: "GT America Standard", Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* Menu icon */
+.hamburger i {
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Hover effect */
+.hamburger:hover {
+  background-color: #000;
+}
+
+/* Adjust main nav items to not overlap with header */
+#navbar .nav-items {
+  margin-top: 100px; /* Add space below the header */
+  padding: 0 40px;
+}
+
+
+@media screen and (max-width: 767px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    padding-top: 50px;
+}
+}
+@media screen and (max-width: 390px) {
+  .nav-link {
+    
+    font-size: clamp(39px, 5vw, 52px);
+    
+}
+}
+@media screen and (max-width: 376px) {
+  #navbar .nav-items {
+      margin-top: 100px;
+      padding: 0;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+}
+}
+
+.fixed-logo {
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    z-index: 1001;
+}
+
+.fixed-logo img {
+    height: 90px;
+    width: auto;
+}

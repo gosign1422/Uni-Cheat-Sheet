@@ -1,0 +1,805 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+p, span, a, button, li {
+  font-family: "GT America Standard", Arial, sans-serif;
+}
+.nav-text{
+  font-family: "Times New Roman", Times, serif;
+}
+/* Import GT America Standard font if you have it */
+@font-face {
+  font-family: "GT America Standard";
+  src: url("path-to-your-font/GTAmericaStandard-Regular.woff2") format("woff2"),
+       url("path-to-your-font/GTAmericaStandard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html, body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%; /* Prevent text scaling in iOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Header & Navigation */
+.logo {
+  width: clamp(60px, 10vw, 80px);
+  margin: clamp(20px, 3vh, 30px) 0 0 clamp(10px, 2vw, 20px);
+}
+
+#header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 0.95) 100%
+  ), url('images/banner.jpg');
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+#navbar {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.95);
+  width: 100%;
+  height: 100vh;
+  text-align: left;
+  transition: 0.6s ease;
+  margin: 0;
+  z-index: 999;
+  padding: 80px 40px;
+}
+
+#navbar.active {
+  top: 0;
+}
+
+/* Navbar Header */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.navbar-logo {
+  display: block;
+}
+
+.navbar-logo img {
+  height: 0px; /* Adjust based on your logo size */
+  width: auto;
+}
+
+.close-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 8px;
+}
+
+.close-btn i {
+  font-size: 24px;
+}
+
+/* Navbar Content */
+.navbar-content {
+  padding: 40px 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 12px 0;
+  margin-left: 40px;
+  position: relative;
+}
+/* Hide main logo when navbar is active */
+#navbar.active ~ #header .logo {
+  opacity: 0;
+}
+
+/* Show navbar logo only when navbar is active */
+.navbar-logo {
+  opacity: 0;
+}
+
+#navbar.active .navbar-logo {
+  opacity: 1;
+}
+
+/* Main nav items */
+.nav-link {
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+  font-size: clamp(42px, 5vw, 52px);
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Text wrapper for underline effect */
+.nav-text {
+  position: relative;
+}
+
+.nav-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover .nav-text::after {
+  width: 100%;
+}
+
+/* Expand icon */
+.expand-icon {
+  font-size: 0.6em;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+/* Update Hamburger Menu */
+.hamburger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: clamp(15px, 2vw, 20px);
+  position: fixed;
+  right: clamp(10px, 2vw, 20px);
+  top: clamp(10px, 2vh, 20px);
+  z-index: 1000;
+  touch-action: manipulation;
+  color: #fff;
+  gap: 10px;
+}
+
+/* Close button styling */
+.hamburger.active {
+  right: 20px; /* Consistent positioning */
+  top: 20px;
+}
+
+.hamburger.active .menu-text {
+  display: none; /* Hide "Menu" text when active */
+}
+
+/* Remove the underline effect */
+#navbar li::after {
+  display: none;
+}
+
+/* Hover effect */
+#navbar li a:hover {
+  opacity: 0.7;
+}
+/* Header and Hamburger Menu */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.menu-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Hide hamburger when navbar is active */
+.hamburger.hide {
+  display: none;
+}
+
+/* Close Button Styling */
+.close-btn {
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.hamburger i {
+  font-size: 20px;
+}
+
+/* Close Button */
+.close-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  z-index: 1001;
+}
+
+.close-btn i {
+  font-size: 20px;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}
+
+/* Hamburger icon transition */
+.hamburger .bar {
+  transition: all 0.6s ease;
+}
+
+/* Submenu styling */
+.submenu {
+  display: none;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.submenu li {
+  margin-left: 0;
+  padding: 8px 0;
+}
+
+.submenu li a {
+  color: #fff !important;
+  font-size: clamp(28px, 3vw, 34px);
+  opacity: 0.8;
+  white-space: nowrap;
+  display: block;
+  text-decoration: none !important; /* Force no underline */
+}
+
+.submenu li a .nav-text::after {
+  display: none !important; /* Force no underline effect */
+}
+
+/* Keep hover opacity effect */
+.submenu li a:hover {
+  opacity: 1;
+}
+
+/* Keep main nav item underlines */
+.nav-item > .nav-link .nav-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+/* Show submenu when parent is active */
+.nav-item.active .submenu {
+  display: block;
+}
+
+/* Add arrow indicator for items with submenus */
+.nav-link.has-submenu::after {
+  content: '+';
+  margin-left: 15px;
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.nav-item.active .nav-link.has-submenu::after {
+  content: '−';
+}
+
+/* When any item is active, dim all nav items */
+.nav-items.has-active .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.3); /* Grey color for inactive items */
+}
+
+/* Keep active item white */
+.nav-items.has-active .nav-item.active .nav-link {
+  color: #fff; /* White color for active item */
+}
+
+/* Keep submenu items white */
+.nav-items.has-active .submenu a {
+  color: #fff;
+}
+
+/* Menu button container */
+.header-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Menu box */
+.hamburger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* Menu text */
+.menu-text {
+  color: #fff;
+  font-size: 24px;
+  font-family: "GT America Standard", Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* Menu icon */
+.hamburger i {
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Hover effect */
+.hamburger:hover {
+  background-color: #000;
+}
+
+/* Adjust main nav items to not overlap with header */
+#navbar .nav-items {
+  margin-top: 100px; /* Add space below the header */
+  padding: 0 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Text Box */
+.text-box {
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 1200px);
+  text-align: center;
+}
+.text-box {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.text-box h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  font-weight: normal;
+}
+
+.text-box p {
+  font-family: "GT America Standard", Arial, sans-serif;
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 800px;
+  opacity: 0.9;
+}
+
+.text-box p:last-of-type {
+  margin-top: 40px;
+}
+
+.impact{
+  font-weight: 600 !important;
+  margin-bottom: clamp(5px, 1vh, 10px);
+}
+
+.impact a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#gosign a{
+  text-decoration: none;
+}
+.hero-btn {
+  margin-top: 30px; /* Adjust this value to increase/decrease the gap */
+}
+
+
+
+
+
+
+
+
+
+
+/* Resources Section */
+.services {
+  padding: clamp(2rem, 5vw, 4rem) clamp(0.5rem, 2vw, 1rem);
+}
+
+.services h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  color: #4b3621;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(10px, 2vw, 20px);
+  justify-items: center;
+  justify-content: center;
+}
+
+.services__card {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8)),
+              var(--bg-image, url('/images/slide1.jpg'));
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  touch-action: manipulation;
+}
+
+.services__card:nth-child(2) { --bg-image: url('/images/slide2.jpg'); }
+.services__card:nth-child(3) { --bg-image: url('/images/slide3.jpg'); }
+
+.services__card:hover {
+  transform: translateY(-10px);
+}
+
+.services__card h2 {
+  color: #fff;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+}
+
+.services__card p {
+  color: #fff;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.4;
+}
+
+.services__card button {
+  align-self: flex-start;
+  padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1rem, 2vw, 1.5rem);
+  background: #ff7062;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  touch-action: manipulation;
+}
+
+.services__card button:hover {
+  background: #e65d50;
+}
+
+/* Add this media query for smaller screens */
+@media screen and (max-width: 960px) {
+  .services__card {
+    width: 90%; /* Make cards take up most of the container width */
+    max-width: 300px; /* Limit maximum width on small screens */
+    margin: 10px auto; /* Center the cards */
+  }
+  
+  .services__card img {
+    max-width: 200px; /* Limit image width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Call to Action */
+.cta {
+  margin: clamp(1rem, 3vw, 2rem) auto;
+  width: min(95%, 1200px);
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/banner2.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: clamp(8px, 2vw, 15px);
+  text-align: center;
+  padding: clamp(20px, 4vw, 30px) clamp(5px, 2vw, 10px);
+  margin-bottom: clamp(4rem, 4vw, 3rem);
+  margin-top: clamp(5rem, 4vw, 3rem);
+}
+
+.cta h1 {
+  color: #fff;
+  font-size: clamp(22px, 2.5vw, 20px);
+  line-height: 1.3;
+}
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #fff;
+  padding: clamp(8px, 1.5vw, 12px) clamp(20px, 3vw, 34px);
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  background: transparent;
+  position: relative;
+  transition: all 0.3s ease;
+  background-color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-btn:hover {
+  border-color: #f44336;
+  background: #f44336;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: clamp(1rem, 3vw, 2rem) 0;
+}
+
+.footer h4 {
+  margin: clamp(0.8rem, 2vw, 1.25rem) 0;
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query */
+/* Additional Media Queries for larger screens */
+@media screen and (min-width: 900px) {
+  .services__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Print styles */
+@media print {
+  .hamburger, 
+  .hero-btn,
+  .services__card button {
+    display: none;
+  }
+}
+
+/* Add these styles to remove link styling in services section */
+.services__card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;  /* Makes the entire card clickable */
+}
+
+.services__card h2,
+.services__card p {
+  color: #fff;  /* Ensures text stays white */
+  text-decoration: none;
+}
+
+/* Add this new media query for two-row layout */
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+  
+  .services__card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .services__card:last-child {
+    grid-column: 1 / -1;
+    width: calc((100% - clamp(1rem, 3vw, 2rem)) / 2); /* Match width of other cards */
+    justify-self: center;
+  }
+}
+
+
+
+@media screen and (max-width: 767px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    padding-top: 50px;
+}
+.text-box h1 {
+  font-weight: bold !important;
+
+}
+}
+@media screen and (max-width: 470px) {
+  .services h1 {
+    font-size: clamp(2rem, 3vw, 3rem) !important;
+}
+.text-box h1 {
+  font-weight: bold !important;
+
+}
+}
+@media screen and (max-width: 390px) {
+  .nav-link {
+    
+    font-size: clamp(39px, 5vw, 52px);
+}
+.text-box h1 {
+  font-weight: bold !important;
+
+}
+}
+@media screen and (max-width: 376px) {
+  .text-box h1 {
+    font-size: clamp(47px, 9vw, 96px) !important;
+    font-weight: bold !important;
+
+  }
+  .text-box p {
+    font-size: clamp(17px, 2vw, 24px) !important;
+
+  }
+  .services h1 {
+    font-size: clamp(1.8rem, 3vw, 3rem) !important;
+}
+  #navbar .nav-items {
+      margin-top: 100px;
+      padding: 0;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+}
+}
+@media screen and (max-width: 345px) {
+  .text-box h1 {
+    font-size: clamp(43px, 9vw, 96px) !important;
+    font-weight: bold !important;
+  }
+  .services h1 {
+    font-size: clamp(1.5rem, 3vw, 3rem) !important;
+}
+}
