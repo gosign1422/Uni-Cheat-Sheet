@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hamburger menu click
     hamburger.addEventListener('click', function(e) {
         e.stopPropagation();
-        navbar.classList.add('active');
+        navbar.classList.toggle('active');
         hamburger.classList.add('hide');
     });
     
