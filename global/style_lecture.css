@@ -4,7 +4,7 @@
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('../images/lecture-image1.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('../images/lecture-image1.webp');
   background-size: cover;
   background-attachment: fixed;
   color: #ffffff;
