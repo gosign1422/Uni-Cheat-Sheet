@@ -24,7 +24,7 @@
   }
   
   .lecture-notes-title {
-    font-size: 4rem ;
+    font-size: 4rem;
     padding: 20px;
     font-family: "Times New Roman", Times, serif;
     color: #ffffff;
@@ -35,8 +35,99 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
                  -2px -2px 4px rgba(0, 0, 0, 0.7),
                  0 0 10px rgba(0, 0, 0, 0.5);
-    animation: fadeInDown 1.75s ease-out;
+    position: relative;
     margin-bottom: 20px;
+  }
+  
+  .lecture-notes-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    animation: underlineAnimation 1s ease-out forwards;
+  }
+  
+  /* Desktop (default) */
+  @keyframes underlineAnimation {
+    from {
+      width: 0;
+    }
+    to {
+      width: 350px;
+    }
+  }
+  
+  /* Large tablets */
+  @media (max-width: 1024px) {
+    @keyframes underlineAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 300px;
+      }
+    }
+    
+    .lecture-notes-title::after {
+      height: 2.5px;
+    }
+  }
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    @keyframes underlineAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 250px;
+      }
+    }
+    
+    .lecture-notes-title::after {
+      height: 2.5px;
+    }
+  }
+  
+  /* Large Mobile */
+  @media (max-width: 480px) {
+    @keyframes underlineAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 200px;
+      }
+    }
+    
+    .lecture-notes-title::after {
+      height: 2px;
+    }
+  }
+  
+  /* Small Mobile */
+  @media (max-width: 320px) {
+    @keyframes underlineAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 180px;
+      }
+    }
+    
+    .lecture-notes-title::after {
+      height: 2px;
+    }
+  }
+  
+  /* Remove the fadeInDown animation */
+  .lecture-notes-title, .lect-sem {
+    animation: none;
   }
   
   .lect-sem {
@@ -50,7 +141,6 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
                  -2px -2px 4px rgba(0, 0, 0, 0.7),
                  0 0 8px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 2.25s ease-out;
     position: relative;
     padding-bottom: 15px;
   }
@@ -64,7 +154,6 @@
     width: 120px;
     height: 3px;
     background-color: #ffffff;
-    animation: fadeIn 2s ease-out;
   }
   
   /* Logo styling */
@@ -481,5 +570,77 @@
       margin: 30px auto;
     }
     }
+  
+  /* Tablets */
+  @media screen and (max-width: 768px) {
+    .slide {
+      flex: 0 0 240px;
+      height: 240px;
+    }
+    
+    .slider {
+      gap: 20px;
+      padding: 8px;
+    }
+    
+    .hover-text {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Large Mobile */
+  @media screen and (max-width: 576px) {
+    .slide {
+      flex: 0 0 220px;
+      height: 220px;
+    }
+    
+    .slider {
+      gap: 15px;
+      padding: 6px;
+    }
+    
+    .hover-text {
+      padding: 10px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Mobile Portrait */
+  @media screen and (max-width: 480px) {
+    .slide {
+      flex: 0 0 200px;
+      height: 200px;
+    }
+    
+    .slider {
+      gap: 12px;
+      padding: 5px;
+    }
+    
+    .hover-text {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Small Mobile */
+  @media screen and (max-width: 320px) {
+    .slide {
+      flex: 0 0 180px;
+      height: 180px;
+    }
+    
+    .slider {
+      gap: 10px;
+      padding: 4px;
+    }
+    
+    .hover-text {
+      padding: 6px;
+      font-size: 0.85rem;
+    }
+  }
   
     

@@ -44,11 +44,6 @@ html, body {
 
 
 /* Header & Navigation */
-.logo {
-  width: clamp(60px, 10vw, 80px);
-  margin: clamp(20px, 3vh, 30px) 0 0 clamp(10px, 2vw, 20px);
-}
-
 #header {
   position: relative;
   display: flex;
@@ -80,7 +75,7 @@ html, body {
   transition: 0.6s ease;
   margin: 0;
   z-index: 999;
-  padding: 80px 40px;
+  padding: 120px 60px 80px 60px;
 }
 
 #navbar.active {
@@ -160,7 +155,7 @@ html, body {
 .nav-link {
   font-family: "Times New Roman", Times, serif;
   text-decoration: none;
-  font-size: clamp(42px, 5vw, 52px);
+  font-size: 52px;
   font-weight: 500;
   color: #fff;
   transition: all 0.3s ease;
@@ -434,8 +429,8 @@ html, body {
 
 /* Adjust main nav items to not overlap with header */
 #navbar .nav-items {
-  margin-top: 100px; /* Add space below the header */
-  padding: 0 40px;
+  margin-top: 0;
+  padding: 0;
 }
 
 
@@ -810,4 +805,157 @@ html, body {
   margin-right: 8px; /* Space between icon and text */
   font-size: 1.5em; /* Adjust icon size */
   vertical-align: middle;
+}
+
+/* Logo Base Styles */
+.fixed-logo {
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.fixed-logo img {
+  height: 90px;
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1440px) {
+  .fixed-logo {
+    left: 20px;
+    top: 20px;
+  }
+  
+  .fixed-logo img {
+    height: 100px;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .fixed-logo {
+    left: 10px;
+    top: 10px;
+  }
+  
+  .fixed-logo img {
+    height: 75px;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 576px) {
+  .fixed-logo {
+    left: 8px;
+    top: 8px;
+  }
+  
+  .fixed-logo img {
+    height: 65px;
+  }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 480px) {
+  .fixed-logo {
+    left: 5px;
+    top: 5px;
+  }
+  
+  .fixed-logo img {
+    height: 55px;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 320px) {
+  .fixed-logo {
+    left: 5px;
+    top: 5px;
+  }
+  
+  .fixed-logo img {
+    height: 45px;
+  }
+}
+
+/* Height-based adjustments */
+@media screen and (max-height: 480px) {
+  .fixed-logo img {
+    height: 50px;
+  }
+}
+
+/* Navbar Items */
+#navbar .nav-items {
+  margin-top: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+  font-size: 52px;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  #navbar {
+    padding: 100px 40px 60px 40px;
+  }
+  
+  .nav-link {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    padding: 100px 30px 50px 30px;
+  }
+  
+  .nav-link {
+    font-size: 44px;
+  }
+  
+  .fixed-logo img {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #navbar {
+    padding: 90px 20px 40px 20px;
+  }
+  
+  .nav-link {
+    font-size: 40px;
+  }
+  
+  .fixed-logo img {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #navbar {
+    padding: 80px 15px 30px 15px;
+  }
+  
+  .nav-link {
+    font-size: 36px;
+  }
+  
+  .fixed-logo img {
+    height: 40px;
+  }
 }
