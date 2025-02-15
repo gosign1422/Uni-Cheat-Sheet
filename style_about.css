@@ -1,0 +1,269 @@
+/* Main Container */
+.about-container {
+    min-height: 100vh;
+    padding: 120px 40px 60px;
+    background: #000000;  /* Pure black */
+    color: #ffffff;
+}
+
+.about-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+} 
+
+/* Image Section */
+.about-image {
+    flex: 1;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    order: 2;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    order: 1;
+}
+
+/* Common styles for both sections */
+.about-section,
+.purpose-section {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.9);  /* Nearly black */
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings for both sections */
+.about-section h2,
+.purpose-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    font-family: "Times New Roman", Times, serif;
+    text-align: left;
+    position: relative;
+    padding-bottom: 15px;
+    color: #ffffff;  /* Pure white */
+}
+
+/* Underline for both headings */
+.about-section h2::after,
+.purpose-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: #ffffff;  /* Pure white underline */
+}
+
+/* Content text for both sections */
+.about-content-text,
+.purpose-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ffffff;  /* Pure white */
+}
+
+/* Link styling */
+.about-content-text a,
+.purpose-content a {
+    color: rgba(255, 255, 255, 0.8);  /* Slightly transparent white */
+    text-decoration: underline;  /* Permanent underline */
+    text-underline-offset: 2px;  /* Space between text and underline */
+    transition: color 0.3s ease;
+}
+
+.about-content-text a:hover,
+.purpose-content a:hover {
+    color: #ffffff;  /* Pure white on hover */
+}
+
+/* Remove the dynamic underline pseudo-elements */
+.about-content-text a::after,
+.purpose-content a::after {
+    display: none;
+}
+
+/* Lists in both sections */
+.about-content-text ul,
+.purpose-content ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.about-content-text li,
+.purpose-content li {
+    color: #ffffff;  /* Pure white */
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.about-content-text li::before,
+.purpose-content li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #ffffff;  /* Pure white bullet points */
+    font-size: 1.5em;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-image, .content-wrapper {
+        order: 0;
+        width: 100%;
+    }
+    
+    .about-image {
+        height: 400px;
+    }
+    
+    .about-section h2,
+    .purpose-section h2 {
+        text-align: center;
+    }
+    
+    .about-section h2::after,
+    .purpose-section h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        padding: 90px 25px 40px;
+    }
+    
+    .about-image {
+        height: 350px;
+    }
+    
+    .about-section,
+    .purpose-section {
+        padding: 30px;
+    }
+    
+    .about-section h2,
+    .purpose-section h2 {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-container {
+        padding: 80px 20px 30px;
+    }
+    
+    .about-image {
+        height: 250px;
+    }
+    
+    .about-section,
+    .purpose-section {
+        padding: 25px;
+    }
+    
+    .about-section h2,
+    .purpose-section h2 {
+        font-size: 2.3rem;
+    }
+    
+    .about-content-text,
+    .purpose-content {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .about-container {
+        padding: 70px 15px 25px;
+    }
+    
+    .about-image {
+        height: 180px;
+        margin-bottom: 20px;
+    }
+    
+    .purpose-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: #000000;  /* Pure black */
+    color: #ffffff;  /* Pure white */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffffff;  /* Pure white */
+}
+
+.footer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);  /* Slightly transparent white */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 20px 0;
+    }
+    
+    .footer h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 15px 0;
+    }
+    
+    .footer h3 {
+        font-size: 1.6rem;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+    }
+}

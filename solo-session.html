@@ -12,10 +12,15 @@
     })(window, document, "clarity", "script", "pujjyldv1p");
 </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - UPES CheatSheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Solo Study Session - UPES CheatSheet</title>
     <link rel="stylesheet" href="global/style_nav.css">
-    <link rel="stylesheet" href="global/style_about.css">
+    <link rel="stylesheet" href="./styles/solo-session.css">
+    <link rel="stylesheet" href="./style_about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="shortcut icon" type="x-icon" href="https://ik.imagekit.io/ptlctjhma/images/logo5.webp">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +34,8 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-CSV0L5NPEQ');
 </script>
-<link rel="stylesheet" href="./style_about.css">
+
+
 </head>
 <body>
     <!-- Logo -->
@@ -39,28 +45,22 @@ gtag('config', 'G-CSV0L5NPEQ');
         </a>
     </div>
 
-    <!-- Menu Button -->
-    <div class="header-right">
-        <button class="hamburger" onclick="toggleNav()">
-            <i class="fas fa-bars"></i>
-            <span class="menu-text">Menu</span>
-        </button>
-    </div>
-
-    <!-- Navigation -->
+    <!-- Header Section with Navigation -->
     <section id="header">
         <div class="header-right">
-          <button class="hamburger">
-            <i class="fas fa-bars"></i>
-            <span class="menu-text">Menu</span>
-          </button>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+                <span class="menu-text">Menu</span>
+            </button>
         </div>
         <div>
             <nav id="navbar">
-                <button class="close-btn" onclick="toggleNav()">
-                    <i class="fas fa-times"></i>
-                    <span>Close</span>
-                </button>
+                <div class="navbar-header">
+                    <button class="close-btn">
+                        <i class="fas fa-times"></i>
+                        <span>Close</span>
+                    </button>
+                </div>
                 <ul class="nav-items">
                     <li class="nav-item">
                         <a href="solo-session.html" class="nav-link active">
@@ -72,8 +72,8 @@ gtag('config', 'G-CSV0L5NPEQ');
                             <span class="nav-text">Lecture Notes</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="../sem1/lecture.html"><span class="nav-text">Semester 1</span></a></li>
-                            <li><a href="../sem2/lecture.html"><span class="nav-text">Semester 2</span></a></li>
+                            <li><a href="./sem1/lecture.html"><span class="nav-text">Semester 1</span></a></li>
+                            <li><a href="./sem2/lecture.html"><span class="nav-text">Semester 2</span></a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -109,49 +109,69 @@ gtag('config', 'G-CSV0L5NPEQ');
         </div>
     </section>
 
-
-    <!-- Main Content -->
-    <main class="about-container">
-        <div class="about-content">
-            <div class="about-image">
-                <img src="https://ik.imagekit.io/ptlctjhma/images/about.jpg" alt="CheatSheet Founders">
+    <!-- Main Content Section -->
+    <main class="study-container">
+        <div class="timer-section">
+            <h1>Solo Study Session</h1>
+            
+            <div class="timer-modes">
+                <button class="mode-btn active" data-mode="pomodoro">Pomodoro</button>
+                <button class="mode-btn" data-mode="shortbreak">Break</button>
             </div>
             
-            <div class="content-wrapper">
-                <div class="about-section">
-                    <h2>About Us</h2>
-                    <div class="about-content-text">
-                        <p>Dude on the Right - <a href="https://x.com/gosign1422">Gosign(Creator)</a>.</p>
-                        <p>Dude on the Left - <a href="https://www.instagram.com/anshhyadavv/">Ansh(Co-Founder)</a>.</p>
-                    </div>
+            <div class="timer-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+
+            <div class="timer-controls">
+                <button id="start" class="timer-btn">Start</button>
+                <button id="pause" class="timer-btn" disabled>Pause</button>
+                <button id="reset" class="timer-btn">Reset</button>
+            </div>
+
+            <div class="timer-settings">
+                <div class="setting">
+                    <label for="workTime">Work Duration (minutes):</label>
+                    <input type="number" id="workTime" value="25" min="1" max="60">
                 </div>
-                
-                <div class="purpose-section">
-                    <h2>Our Purpose</h2>
-                    <div class="purpose-content">
-                        <p>Studying can be a real pain in the ass, especially when all that you want is 'Marks'.</p>
-                        
-                        <p>"20% of the effort can give you 80% of the results", and that's the 20% of content you'll find here.</p>
-                        
-                        <ul>
-                            <li><a href="#" class="menu-trigger" data-menu-item="Lecture Notes">Lecture notes(The Best we can find)</a></li>
-                            <li><a href="#" class="menu-trigger" data-menu-item="Solutions">Detailed problem solutions</a></li>
-                            <li><a href="#" class="menu-trigger" data-menu-item="PYQs">Previous year questions</a></li>
-                        </ul>
-                        
-                        <p>Dear DSW, do give us a break. We are "Studying".</p>
-                    </div>
+                <div class="setting">
+                    <label for="breakTime">Break Duration (minutes):</label>
+                    <input type="number" id="breakTime" value="5" min="1" max="30">
                 </div>
             </div>
         </div>
-    </main>
 
+        <div class="task-management">
+            <h2>Tasks</h2>
+            <div class="task-input-group">
+                <input type="text" id="task-input" placeholder="What are you working on?">
+                <button id="add-task" class="timer-btn">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+            <ul id="tasks" class="task-list"></ul>
+        </div>
+
+        <div class="session-info">
+            <div class="current-phase">
+                <h2>Current Phase: <span id="phase-label">Work</span></h2>
+            </div>
+            <div class="session-stats">
+                <p>Completed Pomodoros: <span id="pomodoro-count">0</span></p>
+                <p>Total Study Time: <span id="total-time">0</span> minutes</p>
+            </div>
+        </div>
+    </main>
     <!-- Footer Section -->
     <section class="footer">
         <h3>About Us</h3>
         <p>&copy; 2024-2025 UPESCheatSheet. All rights reserved.</p>
     </section>
 
+
+    <audio id="timer-end" src="./sounds/timer-end.mp3"></audio>
+    <script src="./scripts/solo-session.js"></script>
     <script src="./script.js"></script>
+
 </body>
 </html>
