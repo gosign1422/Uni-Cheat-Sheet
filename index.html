@@ -24,16 +24,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>UniCheatSheet</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./promo-overlay.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" type="x-icon" href="https://ik.imagekit.io/ptlctjhma/images/logo5.webp">
+    <link rel="shortcut icon" type="x-icon" href="https://res.cloudinary.com/dxaufzj5c/image/upload/v1749959501/logo5_azcgzh.webp"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preload" as="image" href="images/banner.webp" type="image/webp">
-    <link rel="preload" as="image" href="images/banner2.webp" type="image/webp">
-    <link rel="preload" as="image" href="images/lecture-image.webp" type="image/webp">
-    <link rel="preload" as="image" href="images/sol.webp" type="image/webp">
-    <link rel="preload" as="image" href="images/pyq1.webp" type="image/webp">
 </head>
 
 <body>
@@ -41,7 +37,7 @@
      <section id="header">
         <div class="fixed-logo">
             <a href="index.html">
-                <img src="https://ik.imagekit.io/ptlctjhma/images/logo6.webp" alt="Logo">
+                <img src="https://res.cloudinary.com/dxaufzj5c/image/upload/v1749959501/logo6_kn6ypl.webp" alt="Logo">
             </a>
         </div>
         <div class="header-right">
@@ -58,7 +54,7 @@
             <nav id="navbar">
               <div class="navbar-header">
                 <a href="/" class="navbar-logo">
-                  <img src="https://ik.imagekit.io/ptlctjhma/images/logo6.webp" alt="Logo" >
+                  <img src="https://res.cloudinary.com/dxaufzj5c/image/upload/v1749959501/logo6_kn6ypl.webp" alt="Logo" >
                 </a>
                 <button class="close-btn">
                   <i class="fas fa-times"></i>
@@ -104,11 +100,7 @@
                     <span class="nav-text">About</span>
                   </a>
                 </li>
-                <!-- <li class="nav-item">
-                  <a href="./community.html" class="nav-link">
-                    <span class="nav-text">Community</span>
-                  </a>
-                </li> -->
+
               </ul>
             </nav>
         </div>
@@ -170,6 +162,12 @@
     
 <script src="./script.js"></script>
 <script src="js/quotes.js"></script>
+<script src="./promo-overlay.js" defer></script>
+
+<!-- Chat Widget -->
+<link rel="stylesheet" href="chat-widget.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="chat-widget.js" defer></script>
 
 <div id="searchOverlay" class="search-overlay">
     <div class="search-container">
@@ -178,6 +176,16 @@
             <button class="close-search">×</button>
         </div>
         <div class="search-results"></div>
+    </div>
+</div>
+<div id="promoOverlay" class="promo-overlay">
+    <div class="promo-content">
+        <button class="promo-close-btn" onclick="closePromo()">&times;</button>
+        <img id="promoImage" alt="Promotion" class="promo-image">
+        <a href="https://buyfromuni.com" id="visitBtn" target="_blank" class="visit-btn">Visit BuyFromUni.com</a>
+        <a href="https://g.co/kgs/tm8MmYe" id="directionsBtn" target="_blank" class="visit-btn" style="display: none; background-color: #4285F4;">Get Directions</a>
+        <a href="https://qrmn.co/faxf3w" id="menuBtn" target="_blank" class="visit-btn" style="display: none; background-color: #FF6B6B;">Check it out</a>
+        <a href="https://thekamehut.myfoodiv.com/order-now" id="kameHutBtn" target="_blank" class="visit-btn" style="display: none; background-color: #FF9F1C;">Order Now</a>
     </div>
 </div>
 </body>

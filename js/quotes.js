@@ -21,6 +21,7 @@ const quotes = [
     "Study hard what interests you the most in the most undisciplined, irreverent and original manner possible. - Richard Feynman",
     "The more that you read, the more things you will know. The more that you learn, the more places you'll go. - Dr. Seuss",
     "The expert in anything was once a beginner. - Helen Hayes",
+    "No matter the magnitude, as long your vector is in the right direction, you’re sorted  -Ansh Yadav",
     "Shit don't change till you get up and wash your ass. -Kendrick Lamar",
     "The only person who is educated is the one who has learned how to learn and change. - Carl Rogers",
     "Don't let what you cannot do interfere with what you can do. - John Wooden",

@@ -4,7 +4,7 @@
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('https://ik.imagekit.io/ptlctjhma/images/lecture-image.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('https://res.cloudinary.com/dxaufzj5c/image/upload/v1749959502/lecture-image_a1wiz8.webp');
   background-size: cover;
   background-attachment: fixed;
   color: #ffffff;

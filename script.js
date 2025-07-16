@@ -212,13 +212,62 @@ document.addEventListener('DOMContentLoaded', function() {
             description: 'Solutions for Mathematics practice sets and tutorials',
             url: './sem1/solutions.html#aem1-solutions'
         },
-
+        {
+            title: 'C Programming Solutions',
+            description: 'Solutions for C programming assignments and practice problems',
+            url: './sem1/solutions.html#c-solutions'
+        },
+        {
+            title: 'Linux Solutions',
+            description: 'Solutions for Linux assignments and command exercises',
+            url: './sem1/solutions.html#linux-solutions'
+        },
+        {
+            title: 'Problem Solving Solutions',
+            description: 'Solutions for problem-solving exercises and case studies',
+            url: './sem1/solutions.html#problem-solving-solutions'
+        },
+        {
+            title: 'EVS Solutions',
+            description: 'Solutions for Environmental Studies assignments and projects',
+            url: './sem1/solutions.html#evs-solutions'
+        },
         
         // Semester 1 PYQs
         {
             title: 'Semester 1 Previous Year Questions',
             description: 'Past year questions from mid-semester and end-semester exams',
             url: './sem1/pyqs.html'
+        },
+        {
+            title: 'AEM-1 PYQs',
+            description: 'Previous year questions for Applied Engineering Mathematics 1',
+            url: './sem1/pyqs.html#aem1-pyqs'
+        },
+        {
+            title: 'Physics PYQs',
+            description: 'Previous year questions for Engineering Physics',
+            url: './sem1/pyqs.html#physics-pyqs'
+        },
+        {
+            title: 'C Programming PYQs',
+            description: 'Previous year questions for Programming in C',
+            url: './sem1/pyqs.html#c-pyqs'
+        },
+        {
+            title: 'Linux PYQs',
+            description: 'Previous year questions for Linux Operating System',
+            url: './sem1/pyqs.html#linux-pyqs'
+        },
+        {
+            title: 'Problem Solving PYQs',
+            description: 'Previous year questions for Problem Solving',
+            url: './sem1/pyqs.html#problem-solving-pyqs'
+        },
+        {
+            title: 'EVS PYQs',
+            description: 'Previous year questions for Environmental Studies',
+            url: './sem1/pyqs.html#evs-pyqs'
         },
         
         // Semester 2 Content
@@ -264,6 +313,11 @@ document.addEventListener('DOMContentLoaded', function() {
             description: 'Detailed solutions for AEM-2 practice sets',
             url: './sem2/solutions.html#aem2-practice'
         },
+        {
+            title: 'AEM-2 PYQs',
+            description: 'Previous year questions for Applied Engineering Mathematics 2',
+            url: './sem2/pyqs.html#aem2-pyqs'
+        },
 
         // Digital Electronics
         {
@@ -281,6 +335,11 @@ document.addEventListener('DOMContentLoaded', function() {
             description: 'Practice questions and solutions for Digital Electronics',
             url: './sem2/solutions.html#de-practice'
         },
+        {
+            title: 'Digital Electronics PYQs',
+            description: 'Previous year questions for Digital Electronics',
+            url: './sem2/pyqs.html#de-pyqs'
+        },
 
         // Data Structures
         {
@@ -292,6 +351,11 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Data Structures(DSA) Solutions',
             description: 'Solutions for Data Structures assignments and practice problems',
             url: './sem2/solutions.html#ds-solutions'
+        },
+        {
+            title: 'Data Structures PYQs',
+            description: 'Previous year questions for Data Structures',
+            url: './sem2/pyqs.html#ds-pyqs'
         },
 
         // Python Content
@@ -315,6 +379,11 @@ document.addEventListener('DOMContentLoaded', function() {
             description: 'Solutions for Python assignments and practice problems',
             url: './sem2/solutions.html#python-solutions'
         },
+        {
+            title: 'Python PYQs',
+            description: 'Previous year questions for Python Programming',
+            url: './sem2/pyqs.html#python-pyqs'
+        },
 
         // Physics (Semester 2)
         {
@@ -332,6 +401,11 @@ document.addEventListener('DOMContentLoaded', function() {
             description: 'Solutions for Physics assignments and practice problems',
             url: './sem2/solutions.html#physics-solutions'
         },
+        {
+            title: 'Physics PYQs (Semester 2)',
+            description: 'Previous year questions for Semester 2 Physics',
+            url: './sem2/pyqs.html#physics-pyqs'
+        },
 
         // Computer Organization & Architecture
         {
@@ -343,6 +417,16 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'COA Course Content',
             description: 'Complete syllabus and course materials for Computer Organisation',
             url: './sem2/lecture.html#coa'
+        },
+        {
+            title: 'COA Solutions',
+            description: 'Solutions for Computer Organization assignments and problems',
+            url: './sem2/solutions.html#coa-solutions'
+        },
+        {
+            title: 'COA PYQs',
+            description: 'Previous year questions for Computer Organization',
+            url: './sem2/pyqs.html#coa-pyqs'
         },
 
         // Time Management & Priority Setting
@@ -356,6 +440,16 @@ document.addEventListener('DOMContentLoaded', function() {
             description: 'Workbook and exercises for Time Management course',
             url: './sem2/lecture.html#tmps'
         },
+        {
+            title: 'TMPS Solutions',
+            description: 'Solutions for Time Management assignments and activities',
+            url: './sem2/solutions.html#tmps-solutions'
+        },
+        {
+            title: 'TMPS PYQs',
+            description: 'Previous year questions for Time Management course',
+            url: './sem2/pyqs.html#tmps-pyqs'
+        },
 
         // EVS Living Lab
         {
@@ -367,6 +461,16 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'EVS Class Activities',
             description: 'Class activities and group projects for Environmental Studies',
             url: './sem2/lecture.html#evs-lab'
+        },
+        {
+            title: 'EVS Lab Solutions',
+            description: 'Solutions for EVS Living Lab activities and projects',
+            url: './sem2/solutions.html#evs-lab-solutions'
+        },
+        {
+            title: 'EVS Lab PYQs',
+            description: 'Previous year questions for EVS Living Lab',
+            url: './sem2/pyqs.html#evs-lab-pyqs'
         }
     ];
 
