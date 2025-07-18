@@ -10,8 +10,9 @@ Studying can be a real pain, especially when all that you want is 'Marks'.
 ### 🏠 Home Page
 ![Home Dashboard](images/1.png)
 ![Home Page](images/2.png)
-![Menu](images/3.png)
 
+### 👀 Menu
+![Menu](images/3.png)
 
 ### 🔐 About Screen
 ![Login Screen](images/7.png)
