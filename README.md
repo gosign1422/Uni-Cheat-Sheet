@@ -7,13 +7,19 @@ Studying can be a real pain, especially when all that you want is 'Marks'.
 
 ## 📸 Screenshots
 
-### 🏠 Home Dashboard
+### 🏠 Home Page
 ![Home Dashboard](images/1.png)
+![Home Page](images/2.png)
+![Menu](images/3.png)
+
 
 ### 🔐 About Screen
-![Login Screen](images/2.png)
+![Login Screen](images/7.png)
 
-### ⚙️  Page
-![Settings Page](images/3.png)
+### ⚙️ Website Pages
+![Lecture Notes](images/4.png)
+![Solutions](images/5.png)
+![PYQs](images/6.png)
+
 
 ---
