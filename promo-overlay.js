@@ -1,6 +1,5 @@
 // Ad popup functionality
 const promoImages = [ 
-    "https://res.cloudinary.com/dxaufzj5c/image/upload/v1749959500/flats_2_s1jqdx.jpg",
 ];
 
 function getNextImage() {
