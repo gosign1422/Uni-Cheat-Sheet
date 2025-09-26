@@ -56,7 +56,7 @@ html, body {
     rgba(0, 0, 0, 0.4) 40%,
     rgba(0, 0, 0, 0.8) 80%,
     rgba(0, 0, 0, 0.95) 100%
-  ), url('https://res.cloudinary.com/dxaufzj5c/image/upload/v1749959497/banner_l2719w.webp');
+  ), url('https://res.cloudinary.com/dfrjem6nw/image/upload/v1757683647/banner_b4jsns.webp');
   background-position: center;
   background-size: cover;
   z-index: 999;
@@ -543,7 +543,7 @@ html, body {
   border-radius: 8px;
   overflow: hidden;
   background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8)),
-              var(--bg-image, url('https://res.cloudinary.com/dxaufzj5c/image/upload/v1749959502/slide1_xt1aqs.webp'));
+              var(--bg-image, url('https://res.cloudinary.com/dfrjem6nw/image/upload/v1757683646/slide1_utgdud.webp'));
   background-size: cover;
   background-position: center;
   transition: transform 0.3s;
@@ -554,8 +554,8 @@ html, body {
   touch-action: manipulation;
 }
 
-.services__card:nth-child(2) { --bg-image: url('https://res.cloudinary.com/dxaufzj5c/image/upload/v1749959498/slide2_dxumho.webp'); }
-.services__card:nth-child(3) { --bg-image: url('https://res.cloudinary.com/dxaufzj5c/image/upload/v1749959496/slide3_mcorvz.webp'); }
+.services__card:nth-child(2) { --bg-image: url('https://res.cloudinary.com/dfrjem6nw/image/upload/v1757683649/slide2_xemwvy.webp'); }
+.services__card:nth-child(3) { --bg-image: url('https://res.cloudinary.com/dfrjem6nw/image/upload/v1757683650/slide3_i25yvo.webp'); }
 
 .services__card:hover {
   transform: translateY(-10px);
@@ -618,7 +618,7 @@ html, body {
 .cta {
   margin: clamp(1rem, 3vw, 2rem) auto;
   width: min(95%, 1200px);
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://res.cloudinary.com/dxaufzj5c/image/upload/v1749959499/banner2_yvwder.webp');
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://res.cloudinary.com/dfrjem6nw/image/upload/v1757683649/banner2_awjubx.webp');
   background-position: center;
   background-size: cover;
   border-radius: clamp(8px, 2vw, 15px);
