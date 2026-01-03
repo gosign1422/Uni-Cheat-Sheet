@@ -56,7 +56,7 @@ html, body {
     rgba(0, 0, 0, 0.4) 40%,
     rgba(0, 0, 0, 0.8) 80%,
     rgba(0, 0, 0, 0.95) 100%
-  ), url('https://res.cloudinary.com/dqbh6vcs8/image/upload/v1765552638/banner_dea9vp.webp');
+  ), url('https://ik.imagekit.io/ht5jzbk4zn/Basics/banner.webp');
   background-position: center;
   background-size: cover;
   z-index: 999;
@@ -543,7 +543,7 @@ html, body {
   border-radius: 8px;
   overflow: hidden;
   background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8)),
-              var(--bg-image, url('https://res.cloudinary.com/dqbh6vcs8/image/upload/v1765552642/slide1_qfrokw.webp'));
+              var(--bg-image, url('https://ik.imagekit.io/ht5jzbk4zn/Basics/slide1.webp'));
   background-size: cover;
   background-position: center;
   transition: transform 0.3s;
@@ -554,8 +554,8 @@ html, body {
   touch-action: manipulation;
 }
 
-.services__card:nth-child(2) { --bg-image: url('https://res.cloudinary.com/dqbh6vcs8/image/upload/v1765552643/slide2_uwbe6u.webp'); }
-.services__card:nth-child(3) { --bg-image: url('https://res.cloudinary.com/dqbh6vcs8/image/upload/v1765552643/slide3_aqubwi.webp'); }
+.services__card:nth-child(2) { --bg-image: url('https://ik.imagekit.io/ht5jzbk4zn/Basics/slide2.webp'); }
+.services__card:nth-child(3) { --bg-image: url('https://ik.imagekit.io/ht5jzbk4zn/Basics/slide3.webp'); }
 
 .services__card:hover {
   transform: translateY(-10px);
@@ -618,7 +618,7 @@ html, body {
 .cta {
   margin: clamp(1rem, 3vw, 2rem) auto;
   width: min(95%, 1200px);
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://res.cloudinary.com/dqbh6vcs8/image/upload/v1765552641/banner2_i82rgd.webp');
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://ik.imagekit.io/ht5jzbk4zn/Basics/banner2.webp');
   background-position: center;
   background-size: cover;
   border-radius: clamp(8px, 2vw, 15px);
