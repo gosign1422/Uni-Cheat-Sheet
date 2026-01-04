@@ -53,7 +53,7 @@ UniCheatSheet's goal is simple: **Help students (including myself) study smarter
 
 A high-level overview of how students interact with the platform.
 
-![User Flow](images/flowchart1.png)
+![User Flow](images/Flowchart1.png)
 
 ---
 
