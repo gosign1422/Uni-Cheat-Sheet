@@ -80,8 +80,8 @@ Since its launch in **October 2024**, UniCheatSheet has grown into a
 - **50K+ daily requests** during peak exam periods
 - Thousands of students served every semester
 
-![Analytics Semester 1](images/sem1_analytics.png)
-![Analytics Semester 2](images/sem2+sem3_analytics.png)
+![Analytics Semester 1](images/sem1_analytics.jpg)
+![Analytics Semester 2](images/sem2+sem3_analytics.jpg)
 
 The platform has consistently handled real-world academic traffic,
 especially during exam seasons.
@@ -141,13 +141,10 @@ This approach:
 - Preserved a **distraction-free academic experience**
 
 ![Business Poster 1](images/promo-1.png)
-![Business Poster 2](images/promo-2.png)
 
 ---
 
 ## 🚫 No Google Ads. Ever.
-
-![Revenue Overview](images/money.png)
 
 UniCheatSheet is **not monetized in any form via Google Ads** — and never will be.
 
@@ -181,6 +178,9 @@ As a result, revenue has always remained **minimal and secondary** to the studen
 This was a deliberate choice to avoid intrusive monetization, even at the cost of
 slower financial growth.
 
+![Revenue Overview](images/money.png)
+
+
 ---
 
 ## 🌱 Growth & Sustainability
@@ -192,8 +192,8 @@ UniCheatSheet grew **organically from the ground up**, without paid marketing or
 - No venture funding
 - No exploitative monetization
 
-![Campus Poster Promotion 1](images/poster_promo1.png)
-![Campus Poster Promotion 2](images/poster_promo2.png)
+![Campus Poster Promotion 1](images/poster_promo1.jpg)
+![Campus Poster Promotion 2](images/poster_promo2.jpg)
 
 The platform remains:
 - Free for students
