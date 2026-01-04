@@ -81,7 +81,7 @@ Since its launch in **October 2024**, UniCheatSheet has grown into a
 - Thousands of students served every semester
 
 ![Analytics Semester 1](images/sem1_analytics.jpg)
-![Analytics Semester 2](images/sem2+sem3_analytics.jpg)
+![Analytics Semester 2](images/sem2_3_analytics.png)
 
 The platform has consistently handled real-world academic traffic,
 especially during exam seasons.
@@ -193,7 +193,6 @@ UniCheatSheet grew **organically from the ground up**, without paid marketing or
 - No exploitative monetization
 
 ![Campus Poster Promotion 1](images/poster_promo1.jpg)
-![Campus Poster Promotion 2](images/poster_promo2.jpg)
 
 The platform remains:
 - Free for students
