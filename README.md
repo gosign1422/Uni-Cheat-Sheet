@@ -53,7 +53,7 @@ UniCheatSheet's goal is simple: **Help students (including myself) study smarter
 
 A high-level overview of how students interact with the platform.
 
-![User Flow](images/flowchart.png)
+![User Flow](images/flowchart1.png)
 
 ---
 
@@ -98,24 +98,17 @@ end-to-end ownership — spanning development, deployment, analytics, and mainte
 - **CSS3** — custom, responsive layouts with no UI frameworks
 - **Vanilla JavaScript** — client-side logic and interactivity
 
-These choices were **intentional**:
-- Minimal dependencies
-- Fast load times
-- Low operational overhead
-- High reliability under traffic spikes
-
 ### Analytics, Hosting & Infrastructure
 - **Google Analytics** — traffic analysis and usage insights
 - **Microsoft Clarity** — user behavior and interaction heatmaps
 - **Hostinger** — website hosting and deployment
 - **ImageKit & Cloudinary** — CDN-based image hosting and optimization
 
-### Engineering Highlights
-- Designed, developed, deployed, and maintained independently
-- Optimized for **read-heavy workloads** and peak exam traffic
-- Scales reliably to **50K+ daily requests**
-- Clean separation between content, UI, and logic
-- Lightweight, cost-efficient architecture for long-term sustainability
+These choices were **intentional**:
+- Minimal dependencies
+- Fast load times
+- Low operational overhead
+- High reliability under traffic spikes
 
 The entire codebase is **open-sourced on GitHub**, enabling transparency and reuse by
 students from other universities.
@@ -145,6 +138,8 @@ This approach:
 ---
 
 ## 🚫 No Google Ads. Ever.
+
+![Revenue Overview](images/money.png)
 
 UniCheatSheet is **not monetized in any form via Google Ads** — and never will be.
 
@@ -177,9 +172,6 @@ As a result, revenue has always remained **minimal and secondary** to the studen
 
 This was a deliberate choice to avoid intrusive monetization, even at the cost of
 slower financial growth.
-
-![Revenue Overview](images/money.png)
-
 
 ---
 
