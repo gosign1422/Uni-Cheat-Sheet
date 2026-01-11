@@ -184,7 +184,7 @@ UniCheatSheet grew **organically from the ground up**, without paid marketing or
 - No venture funding
 - No exploitative monetization
 
-![Campus Poster Promotion 1](images/poster_promo1.jpg)
+![Campus Poster Promotion 1](images/poster_promo1.jpeg)
 
 The platform remains:
 - Free for students
