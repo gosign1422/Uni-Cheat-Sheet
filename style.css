@@ -213,7 +213,7 @@ html, body {
 }
 
 .hamburger.active .menu-text {
-  display: none; /* Hide "Menu" text when active */
+  display: inline;
 }
 
 /* Remove the underline effect */
@@ -781,7 +781,6 @@ html, body {
     font-size: clamp(1.6rem, 3vw, 3rem) !important;
 }
 }
-}
 @media screen and (max-width: 376px) {
   #navbar .nav-items {
       margin-top: 100px;
@@ -1002,7 +1001,16 @@ html, body {
   
   .search-trigger {
     padding: 12px;
-    right: 80px;
+    right: auto;
+  }
+
+  .header-right {
+    right: 12px;
+    gap: 8px;
+  }
+
+  .header-right .hamburger {
+    padding: 12px;
   }
 }
 
@@ -1010,11 +1018,28 @@ html, body {
 .header-right {
   position: fixed;
   top: 20px;
-  right: 150px;
+  right: 20px;
   z-index: 1000;
   display: flex;
   align-items: center;
-  gap: 30px; /* Increased gap between buttons */
+  gap: 12px;
+}
+
+/* Keep search + menu aligned and equal sizing */
+.header-right .hamburger {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: none;
+  padding: 12px 16px;
+  border-radius: 3px;
+}
+
+.header-right .hamburger i {
+  font-size: 24px;
+  color: #fff;
 }
 
 .search-overlay {

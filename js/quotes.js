@@ -3,7 +3,7 @@ const quotes = [
     "Shit don't change till you get up and wash your ass. -Kendrick Lamar",
     "All squares are rectangles, but all rectangles are not squares. - Ansh Yadav",
     "Your desire to create must be greater than your fear of it.",
-    "Since when did it become Not Cool to Try? Relentlessly try everything that interests you. - Yash Gusain",
+    "Since when did it become Not Cool to Try? Relentlessly try everything that interests you. - Gosign",
     "Don't dismiss idea in your mind. It's a disservice to the art. The only way to truly know if an idea is good is to try it. - Rick Rubin",
     "Physics is like sex: sure, it may give some practical results, but that's not why we do it. - Richard Feynman",
     "Shit don't change till you get up and wash your ass. -Kendrick Lamar",
@@ -14,7 +14,7 @@ const quotes = [
     "Study hard what interests you the most in the most undisciplined, irreverent and original manner possible. - Richard Feynman",
     "The more that you read, the more things you will know. The more that you learn, the more places you'll go. - Dr. Seuss",
     "The expert in anything was once a beginner. - Helen Hayes",
-    "Since when did it become Not Cool to Try? Relentlessly try everything that interests you. - Yash Gusain",
+    "Since when did it become Not Cool to Try? Relentlessly try everything that interests you. - Gosign",
     "No matter the magnitude, as long your vector is in the right direction, you’re sorted  -Ansh Yadav",
     "Shit don't change till you get up and wash your ass. -Kendrick Lamar",
     "Don't dismiss idea in your mind. It's a disservice to the art. The only way to truly know if an idea is good is to try it. - Rick Rubin",
@@ -30,7 +30,7 @@ const quotes = [
     "Physics is like sex: sure, it may give some practical results, but that's not why we do it. - Richard Feynman",
     "Focus on creating something you love, and your mission is accomplished. - Rick Rubin",
     "What you have to offer is already inside of you. - Rick Rubin",
-    "Since when did it become Not Cool to Try? Relentlessly try everything that interests you. - Yash Gusain",
+    "Since when did it become Not Cool to Try? Relentlessly try everything that interests you. - Gosign",
     "Don't dismiss idea in your mind. It's a disservice to the art. The only way to truly know if an idea is good is to try it. - Rick Rubin",
     // Add more quotes here...
 ];

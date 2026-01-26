@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('#navbar');
     const closeBtn = document.querySelector('.close-btn');
     const menuItems = document.querySelectorAll('.nav-link.has-submenu');
+    const menuText = hamburger.querySelector('.menu-text');
+    const menuIcon = hamburger.querySelector('i');
     const menuTriggers = document.querySelectorAll('.menu-trigger');
     const navItems = document.querySelector('.nav-items');
     const sliders = document.querySelectorAll('.slider');
@@ -13,10 +15,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchResults = document.querySelector('.search-results');
     
     // Function to open menu and trigger specific item
+    function setMenuButtonState(isOpen) {
+        if (isOpen) {
+            menuText.textContent = 'Close';
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+            hamburger.classList.add('is-open');
+        } else {
+            menuText.textContent = 'Menu';
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+            hamburger.classList.remove('is-open');
+        }
+    }
+
     function openMenuAndTriggerItem(itemName) {
         // First open the navbar
         navbar.classList.add('active');
-        hamburger.classList.add('hide');
+        setMenuButtonState(true);
         
         // Find and trigger the corresponding menu item
         menuItems.forEach(item => {
@@ -51,14 +67,14 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburger.addEventListener('click', function(e) {
         e.stopPropagation();
         navbar.classList.toggle('active');
-        hamburger.classList.add('hide');
+        setMenuButtonState(navbar.classList.contains('active'));
     });
     
     // Close button click
     closeBtn.addEventListener('click', function(e) {
         e.stopPropagation();
         navbar.classList.remove('active');
-        hamburger.classList.remove('hide');
+        setMenuButtonState(false);
         // Remove active states
         document.querySelectorAll('.nav-item.active').forEach(item => {
             item.classList.remove('active');
@@ -97,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(e) {
         if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
             navbar.classList.remove('active');
-            hamburger.classList.remove('hide');
+            setMenuButtonState(false);
             document.querySelectorAll('.nav-item.active').forEach(item => {
                 item.classList.remove('active');
             });
@@ -157,19 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Comprehensive content mapping for search
     const contentMap = [
-        // Solo Study Session
-        {
-            title: 'Solo Study Session',
-            description: 'Interactive study session with timer and focus mode',
-            url: './solo-session.html'
-        },
         
         // Semester 1 Content
-        {
-            title: 'Semester 1 Lecture Notes',
-            description: 'Complete lecture notes for Semester 1 subjects',
-            url: './sem1/lecture.html'
-        },
         {
             title: 'AEM-1 (Mathematics)',
             description: 'Applied Engineering Mathematics 1 lecture notes and study material',
@@ -203,11 +208,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Semester 1 Solutions
         {
-            title: 'Semester 1 Solutions',
-            description: 'Solutions for practice sets, tutorial sheets and assignments',
-            url: './sem1/solutions.html'
-        },
-        {
             title: 'AEM-1 Solutions',
             description: 'Solutions for Mathematics practice sets and tutorials',
             url: './sem1/solutions.html#aem1-solutions'
@@ -234,11 +234,6 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         
         // Semester 1 PYQs
-        {
-            title: 'Semester 1 Previous Year Questions',
-            description: 'Past year questions from mid-semester and end-semester exams',
-            url: './sem1/pyqs.html'
-        },
         {
             title: 'AEM-1 PYQs',
             description: 'Previous year questions for Applied Engineering Mathematics 1',
@@ -268,23 +263,6 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'EVS PYQs',
             description: 'Previous year questions for Environmental Studies',
             url: './sem1/pyqs.html#evs-pyqs'
-        },
-        
-        // Semester 2 Content
-        {
-            title: 'Semester 2 Lecture Notes',
-            description: 'Complete lecture notes for Semester 2 subjects',
-            url: './sem2/lecture.html'
-        },
-        {
-            title: 'Semester 2 Solutions',
-            description: 'Solutions for Semester 2 practice sets and tutorials',
-            url: './sem2/solutions.html'
-        },
-        {
-            title: 'Semester 2 Previous Year Questions',
-            description: 'Past year questions for Semester 2 subjects',
-            url: './sem2/pyqs.html'
         },
         
         // About Page
@@ -474,8 +452,191 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
+    // Semester 3 Content Mapping
+    const semester3Content = [
+        // Discreet Mathematical Structures
+        {
+            title: 'Discreet Mathematical Structures',
+            description: 'Lecture notes and course content for Discreet Mathematical Structures',
+            url: './sem3/lecture.html#aem2'
+        },
+        {
+            title: 'Discreet Mathematical Structures Solutions',
+            description: 'Solutions for Discreet Mathematical Structures practice problems',
+            url: './sem3/solutions.html#aem2-solutions'
+        },
+        {
+            title: 'Discreet Mathematical Structures PYQs',
+            description: 'Previous year questions for Discreet Mathematical Structures',
+            url: './sem3/pyqs.html#aem2-solutions'
+        },
+
+        // Operating Systems
+        {
+            title: 'Operating Systems',
+            description: 'Lecture notes and course content for Operating Systems',
+            url: './sem3/lecture.html#physics-theory'
+        },
+        {
+            title: 'Operating Systems Solutions',
+            description: 'Solutions for Operating Systems assignments and practice problems',
+            url: './sem3/solutions.html#physics-solutions'
+        },
+        {
+            title: 'Operating Systems PYQs',
+            description: 'Previous year questions for Operating Systems',
+            url: './sem3/pyqs.html#physics-solutions'
+        },
+
+        // Elements of AIML
+        {
+            title: 'Elements of AIML',
+            description: 'Lecture notes and course content for Elements of AIML',
+            url: './sem3/lecture.html#de'
+        },
+        {
+            title: 'Elements of AIML Solutions',
+            description: 'Solutions for Elements of AIML assignments and practice problems',
+            url: './sem3/solutions.html#de-solutions'
+        },
+        {
+            title: 'Elements of AIML PYQs',
+            description: 'Previous year questions for Elements of AIML',
+            url: './sem3/pyqs.html#de-solutions'
+        },
+
+        // Database Management Systems
+        {
+            title: 'Database Management Systems',
+            description: 'Lecture notes and course content for Database Management Systems',
+            url: './sem3/lecture.html#coa'
+        },
+        {
+            title: 'DBMS Solutions',
+            description: 'Solutions for Database Management Systems assignments and practice problems',
+            url: './sem3/solutions.html#coa-solutions'
+        },
+        {
+            title: 'DBMS PYQs',
+            description: 'Previous year questions for Database Management Systems',
+            url: './sem3/pyqs.html#coa-solutions'
+        },
+
+        // Design & Analysis of Algorithms
+        {
+            title: 'Design & Analysis of Algorithms (Theory)',
+            description: 'Lecture notes and course content for DAA theory',
+            url: './sem3/lecture.html#python'
+        },
+        {
+            title: 'Design & Analysis of Algorithms (Lab)',
+            description: 'Lab content and practicals for DAA',
+            url: './sem3/lecture.html#python1'
+        },
+        {
+            title: 'DAA Solutions',
+            description: 'Solutions for Design & Analysis of Algorithms practice problems',
+            url: './sem3/solutions.html#dsa-solutions'
+        },
+        {
+            title: 'DAA PYQs',
+            description: 'Previous year questions for Design & Analysis of Algorithms',
+            url: './sem3/pyqs.html#daa-solutions'
+        }
+    ];
+
+    // Semester 4 Content Mapping
+    const semester4Content = [
+        // Linear Algebra
+        {
+            title: 'Linear Algebra',
+            description: 'Lecture notes and course content for Linear Algebra',
+            url: './sem4/lecture.html#aem2'
+        },
+        {
+            title: 'Linear Algebra Solutions',
+            description: 'Solutions for Linear Algebra assignments and practice problems',
+            url: './sem4/solutions.html#aem2-solutions'
+        },
+        {
+            title: 'Linear Algebra PYQs',
+            description: 'Previous year questions for Linear Algebra',
+            url: './sem4/pyqs.html#aem2-solutions'
+        },
+
+        // Information Technology and Cyber Security
+        {
+            title: 'Information Technology and Cyber Security',
+            description: 'Lecture notes and course content for IT and Cyber Security',
+            url: './sem4/lecture.html#physics-theory'
+        },
+        {
+            title: 'IT and Cyber Security Solutions',
+            description: 'Solutions for IT and Cyber Security assignments and practice problems',
+            url: './sem4/solutions.html#physics-solutions'
+        },
+        {
+            title: 'IT and Cyber Security PYQs',
+            description: 'Previous year questions for IT and Cyber Security',
+            url: './sem4/pyqs.html#physics-solutions'
+        },
+
+        // Data Communication and Networks
+        {
+            title: 'Data Communication and Networks',
+            description: 'Lecture notes and course content for Data Communication and Networks',
+            url: './sem4/lecture.html#de'
+        },
+        {
+            title: 'Data Communication and Networks Solutions',
+            description: 'Solutions for Data Communication and Networks assignments and practice problems',
+            url: './sem4/solutions.html#de-solutions'
+        },
+        {
+            title: 'Data Communication and Networks PYQs',
+            description: 'Previous year questions for Data Communication and Networks',
+            url: './sem4/pyqs.html#de-solutions'
+        },
+
+        // Software Engineering
+        {
+            title: 'Software Engineering',
+            description: 'Lecture notes and course content for Software Engineering',
+            url: './sem4/lecture.html#coa'
+        },
+        {
+            title: 'Software Engineering Solutions',
+            description: 'Solutions for Software Engineering assignments and practice problems',
+            url: './sem4/solutions.html#coa-solutions'
+        },
+        {
+            title: 'Software Engineering PYQs',
+            description: 'Previous year questions for Software Engineering',
+            url: './sem4/pyqs.html#coa-solutions'
+        },
+
+        // Object Oriented Programming
+        {
+            title: 'Object Oriented Programming',
+            description: 'Lecture notes and course content for Object Oriented Programming',
+            url: './sem4/lecture.html#python'
+        },
+        {
+            title: 'Object Oriented Programming Solutions',
+            description: 'Solutions for Object Oriented Programming assignments and practice problems',
+            url: './sem4/solutions.html#dsa-solutions'
+        },
+        {
+            title: 'Object Oriented Programming PYQs',
+            description: 'Previous year questions for Object Oriented Programming',
+            url: './sem4/pyqs.html#daa-solutions'
+        }
+    ];
+
     // Add this to your existing contentMap array
     contentMap.push(...semester2Content);
+    contentMap.push(...semester3Content);
+    contentMap.push(...semester4Content);
 
     searchTrigger.addEventListener('click', () => {
         searchOverlay.classList.add('active');
